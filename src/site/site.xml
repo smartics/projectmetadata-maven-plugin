@@ -21,7 +21,7 @@
 
   <bannerLeft>
     <name>${project.name}</name>
-    <src>images/logo/logo.png</src>
+    <src>images/logos/logo.png</src>
     <alt>${project.name}</alt>
   </bannerLeft>
   <bannerRight>
