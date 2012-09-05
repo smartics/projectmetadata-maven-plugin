@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Copyright 2010-2011 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!-- Contains only the required information. -->
+<projectMetaData>
+  <metaData>
+    <name>Minimal</name>
+
+    <files>
+      <projectLocation>/target/minimal</projectLocation>
+      <archiveLocation>/minimal</archiveLocation>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>Full</name>
+    <homepage>http://www.example.com/full</homepage>
+    <description>A descriptor with all fields set.</description>
+    <category>category</category>
+    <subcategory>subcategory</subcategory>
+
+    <files>
+      <projectLocation>/target/full</projectLocation>
+      <archiveLocation>/category/subcategory/full</archiveLocation>
+      <filter>
+        <includes>
+          <include>*.xml</include>
+          <include>*.csv</include>
+        </includes>
+        <excludes>
+          <exclude>special.xml</exclude>
+          <exclude>index.csv</exclude>
+        </excludes>
+      </filter>
+    </files>
+  </metaData>
+</projectMetaData>
