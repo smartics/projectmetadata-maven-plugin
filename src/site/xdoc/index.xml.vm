@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2010-2011 smartics, Kronseder & Reiner GmbH
+    Copyright 2010-2012 smartics, Kronseder & Reiner GmbH
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -20,24 +20,24 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
     <head profile="http://dublincore.org/documents/dcq-html/">
-      <title>maven-projectmetadata-plugin</title>
+      <title>Home</title>
 
       <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
       <link rel="DC.rights copyright" href="license.html" />
 
       <meta name="keywords" content="project, metadata, maven plugin, maven"/>
-      <meta name="description" content="Homepage of the Maven projectmetadata plugin. This easy-to-use plugin collects and packages project meta data."/>
+      <meta name="description" content="Homepage of the projectmetadata Maven plugin. This easy-to-use plugin collects and packages project meta data."/>
       <meta name="author" content="smartics"/>
 
-      <meta name="DC.title" content="maven-projectmetadata-plugin"/>
+      <meta name="DC.title" content="projectmetadata-maven-plugin"/>
       <meta name="DC.creator" content="smartics"/>
-      <meta name="DC.subject" content="Homepage of the Maven projectmetadata plugin"/>
-      <meta name="DC.description" content="Homepage of the Maven projectmetadata plugin. This easy-to-use plugin collects and packages project meta data."/>
+      <meta name="DC.subject" content="Homepage of the projectmetadata Maven plugin"/>
+      <meta name="DC.description" content="Homepage of the projectmetadata Maven plugin. This easy-to-use plugin collects and packages project meta data."/>
       <meta name="DC.publisher" content="smartics"/>
-      <meta name="DC.rights" content="Copyright 2010 smartics"/>
+      <meta name="DC.rights" content="Copyright 2010-2012 smartics"/>
     </head>
 	<body>
-    <section name="maven-projectmetadata-plugin">
+    <section name="Overview">
       <p>
         This <a href="http://maven.apache.org/">Maven</a> plugin collects and packages meta data
         about the project and attaches the artifact to the build.
@@ -45,14 +45,15 @@
       <p>
         This project is in an early development stage.
       </p>
+		</section>
 
-      <subsection name="Configuration">
-        <p>
-          To run successfully this plugin requires the site plugin to have run and
-          have generated the report files to include. Therefore add something like
-          the following to the build plugins section of your POM:
-        </p>
-        <source><![CDATA[<plugin>
+    <section name="Configuration">
+      <p>
+        To run successfully this plugin requires the site plugin to have run and
+        have generated the report files to include. Therefore add something like
+        the following to the build plugins section of your POM:
+      </p>
+      <source><![CDATA[<plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-site-plugin</artifactId>
   <executions>
@@ -78,41 +79,41 @@
     </execution>
   </executions>
 </plugin>]]></source>
-      </subsection>
+    </section>
 
-      <subsection name="Standard Project Meta Data">
-        <p>
-          Per default the following reports are added to the attached artifact,
-          if they are configured (plugins added to report section) with the project:
-        </p>
-        <ol>
-          <li>Static Analysis
-            <ul>
-              <li>Checkstyle</li>
-              <li>PMD</li>
-              <li>FindBugs</li>
-              <li>JavaNCSS</li>
-              <li>JDepend</li>
-            </ul>
-          </li>
-          <li>Test
-            <ul>
-              <li>JUnit</li>
-            </ul>
-          </li>
-          <li>Marker
-            <ul>
-              <li>Tags</li>
-            </ul>
-          </li>
-        </ol>
-      </subsection>
+    <section name="Standard Project Meta Data">
+      <p>
+        Per default the following reports are added to the attached artifact,
+        if they are configured (plugins added to report section) with the project:
+      </p>
+      <ol>
+        <li>Static Analysis
+          <ul>
+            <li>Checkstyle</li>
+            <li>PMD</li>
+            <li>FindBugs</li>
+            <li>JavaNCSS</li>
+            <li>JDepend</li>
+          </ul>
+        </li>
+        <li>Test
+          <ul>
+            <li>JUnit</li>
+          </ul>
+        </li>
+        <li>Marker
+          <ul>
+            <li>Tags</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-      <subsection name="Adding Project Meta Data">
-        <p>
-          Provide a project meta data descriptor of the following form:
-        </p>
-        <source><![CDATA[<projectMetaData>
+    <section name="Adding Project Meta Data">
+      <p>
+        Provide a project meta data descriptor of the following form:
+      </p>
+      <source><![CDATA[<projectMetaData>
   <metaData>
     <name></name>
     <homepage></homepage>
@@ -136,15 +137,15 @@
     </files>
   </metaData>
 </projectMetaData>]]></source>
-        <p>
-          Add a link to this configuration file by the
-          <a href="archive-mojo.html#additionalDescriptorFiles">additionalDescriptorFiles</a>
-          property.
-        </p>
-        <p>
-          This is an example for the inclusion of the checkstyle report files:
-        </p>
-        <source><![CDATA[<projectMetaData>
+      <p>
+        Add a link to this configuration file by the
+        <a href="archive-mojo.html#additionalDescriptorFiles">additionalDescriptorFiles</a>
+        property.
+      </p>
+      <p>
+        This is an example for the inclusion of the checkstyle report files:
+      </p>
+      <source><![CDATA[<projectMetaData>
   <metaData>
     <name>Checkstyle</name>
     <homepage>http://checkstyle.sourceforge.net/</homepage>
@@ -169,7 +170,6 @@
     </files>
   </metaData>
 </projectMetaData>]]></source>
-      </subsection>
     </section>
   </body>
 </document>
