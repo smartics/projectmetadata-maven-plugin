@@ -17,8 +17,6 @@
 
 -->
 <project name="${project.name}">
-  <publishDate position="bottom" format="dd. MMMM yyyy"/>
-
   <bannerLeft>
     <name>${project.name}</name>
     <src>images/logos/logo.png</src>
@@ -34,6 +32,12 @@
   <body>
     <breadcrumbs>
       <item name="${project.name}"  href="${project.url}"/>
+    </breadcrumbs>
+
+    <breadcrumbs>
+      <item name="smartics" href="http://www.smartics.de/"/>
+      <item name="projects" href="${webroot-projects}/index.html"/>
+      <item name="${project.artifactId}" href="${project.url}/index.html"/>
     </breadcrumbs>
 
     <menu name="Overview">
