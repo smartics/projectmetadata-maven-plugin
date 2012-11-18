@@ -61,6 +61,51 @@
     </execution>
   </executions>
 </plugin>]]></source>
+
+        <p>
+          Since generating the reports takes a lot of build time, please
+          consider to add the configuration to a profile you may activate for
+          release builds.
+        </p>
+        <source><![CDATA[<profiles>
+  <profile>
+    <id>release</id>
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <executions>
+            <execution>
+              <id>attach-site</id>
+              <phase>package</phase>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>${project.groupId}</groupId>
+          <artifactId>${project.artifactId}</artifactId>
+          <version>${project.version}</version>
+          <executions>
+            <execution>
+              <id>metadata</id>
+              <goals>
+                <goal>archive</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+      </plugins>
+    </build>
+  </profile>
+</profiles>]]></source>
+        <p>
+          Activate this profile by adding <tt>-Prelease</tt> to the Maven
+          command.
+        </p>
       </subsection>
     </section>
   </body>
