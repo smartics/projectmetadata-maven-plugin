@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010-2012 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <head>
+      <title>Usage</title>
+    </head>
+	<body>
+    <section name="Usage">
+      <p>
+        This page shows how to integrate this plugin into your
+        <a href="http://maven.apache.org/">Maven</a> build process.
+      </p>
+
+      <subsection name="Configuration">
+        <p>
+          To run successfully this plugin requires the site plugin to have run and
+          have generated the report files to include. Therefore add something like
+          the following to the build plugins section of your POM:
+        </p>
+        <source><![CDATA[<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-site-plugin</artifactId>
+  <executions>
+    <execution>
+      <id>attach-site</id>
+      <phase>package</phase>
+      <goals>
+        <goal>jar</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+<plugin>
+  <groupId>${project.groupId}</groupId>
+  <artifactId>${project.artifactId}</artifactId>
+  <version>${project.version}</version>
+  <executions>
+    <execution>
+      <id>metadata</id>
+      <goals>
+        <goal>archive</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>]]></source>
+      </subsection>
+    </section>
+  </body>
+</document>

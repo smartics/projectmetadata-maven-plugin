@@ -9,7 +9,7 @@
   <parent>
     <groupId>de.smartics.config.pom</groupId>
     <artifactId>pom-java</artifactId>
-    <version>31.2.5-SNAPSHOT</version>
+    <version>31.2.6</version>
   </parent>
 
   <groupId>de.smartics.maven.plugin</groupId>
@@ -69,6 +69,9 @@
     <ohlohProjectId>485170</ohlohProjectId>
     -->
     <twitterId>smartics</twitterId>
+
+    <descriptors>${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/descriptors</descriptors>
+    <descriptors-xdoc>${project.build.directory}/generated-site/xdoc/descriptors</descriptors-xdoc>
   </properties>
 
   <dependencies>
@@ -129,6 +132,45 @@
           <source>1.5</source>
           <target>1.5</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>transform</id>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <mkdir dir="${descriptors-xdoc}"/>
+                <xslt
+                  in="${descriptors}/marker.xml"
+                  out="${descriptors-xdoc}/marker.xml"
+                  style="${basedir}/src/etc/xsl/create-marker-doc.xsl" />
+                <xslt
+                  in="${descriptors}/static-analysis.xml"
+                  out="${descriptors-xdoc}/static-analysis.xml"
+                  style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl" />
+                <xslt
+                  in="${descriptors}/test.xml"
+                  out="${descriptors-xdoc}/test.xml"
+                  style="${basedir}/src/etc/xsl/create-test-doc.xsl" />
+
+                <xslt in="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd/projectmetadata.xsd"
+                      out="${project.build.directory}/generated-site/xdoc/projectmetadata-doc.xml"
+                      style="${basedir}/src/etc/xsl/create-projectmetadata-doc.xsl" />
+                <copy todir="${project.build.directory}/generated-site/resources/download">
+                  <fileset dir="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd">
+                    <include name="**/*.xsd" />
+                  </fileset>
+                </copy>
+              </target>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

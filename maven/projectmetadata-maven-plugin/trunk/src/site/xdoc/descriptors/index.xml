@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010-2012 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <head profile="http://dublincore.org/documents/dcq-html/">
+      <title>Descriptors</title>
+    </head>
+	<body>
+    <section name="Standard Project Meta Data">
+      <p>
+        Per default the following reports are added to the attached artifact,
+        if they are configured (plugins added to report section) with the project:
+      </p>
+      <ol>
+        <li><a href="static-analysis.html">Static Analysis</a>
+          <ul>
+            <li>Checkstyle</li>
+            <li>PMD</li>
+            <li>FindBugs</li>
+            <li>JavaNCSS</li>
+            <li>JDepend</li>
+          </ul>
+        </li>
+        <li><a href="test.html">Test</a>
+          <ul>
+            <li>JUnit</li>
+          </ul>
+        </li>
+        <li><a href="marker.html">Marker</a>
+          <ul>
+            <li>Tags</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section name="Structure of a Descriptor File">
+      <p>
+        A project meta data descriptor has the following form (please refer to
+        <a href="../projectmetadata-doc.html">XSD</a> for details):
+      </p>
+      <source><![CDATA[<projectMetaData>
+  <metaData>
+    <name></name>
+    <homepage></homepage>
+    <description></description>
+    <category></category>
+    <subcategory></subcategory>
+
+    <files>
+      <projectLocation></projectLocation>
+      <archiveLocation></archiveLocation>
+      <filter>
+        <includes>
+          <include></include>
+          ...
+        </includes>
+        <excludes>
+          <exclude></exclude>
+          ...
+        </excludes>
+      </filter>
+    </files>
+  </metaData>
+</projectMetaData>]]></source>
+      <p>
+        Add a link to this configuration file by the
+        <a href="../archive-mojo.html#additionalDescriptorFiles">additionalDescriptorFiles</a>
+        property.
+      </p>
+    </section>
+  </body>
+</document>

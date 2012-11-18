@@ -17,7 +17,7 @@
 
 -->
 <!-- Contains only the required information. -->
-<projectMetaData>
+<projectMetaData xmlns="http://smartics.de/projectmetadata/1">
   <metaData>
     <name>Minimal</name>
 

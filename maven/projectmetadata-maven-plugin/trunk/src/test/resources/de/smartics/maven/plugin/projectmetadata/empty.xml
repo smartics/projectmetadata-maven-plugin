@@ -16,6 +16,6 @@
     limitations under the License.
 
 -->
-<projectMetaData>
+<projectMetaData xmlns="http://smartics.de/projectmetadata/1">
   <!-- Illegal empty decriptor. -->
 </projectMetaData>
