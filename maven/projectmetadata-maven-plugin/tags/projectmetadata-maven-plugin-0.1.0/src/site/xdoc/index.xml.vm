@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2010-2012 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<document xmlns="http://maven.apache.org/XDOC/2.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/XDOC/2.0 http://maven.apache.org/xsd/xdoc-2.0.xsd">
+    <head profile="http://dublincore.org/documents/dcq-html/">
+      <title>Home</title>
+
+      <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+      <link rel="DC.rights copyright" href="license.html" />
+
+      <meta name="keywords" content="project, metadata, maven plugin, maven"/>
+      <meta name="description" content="Homepage of the projectmetadata Maven plugin. This easy-to-use plugin collects and packages project meta data."/>
+      <meta name="author" content="smartics"/>
+
+      <meta name="DC.title" content="projectmetadata-maven-plugin"/>
+      <meta name="DC.creator" content="smartics"/>
+      <meta name="DC.subject" content="Homepage of the projectmetadata Maven plugin"/>
+      <meta name="DC.description" content="Homepage of the projectmetadata Maven plugin. This easy-to-use plugin collects and packages project meta data."/>
+      <meta name="DC.publisher" content="smartics"/>
+      <meta name="DC.rights" content="Copyright 2010-2012 smartics"/>
+    </head>
+	<body>
+    <section name="Overview">
+      <p>
+        This <a href="http://maven.apache.org/">Maven</a> plugin collects and
+        packages metadata about the project and attaches the artifact containing
+        this metadata to the build.
+      </p>
+
+      <p>
+        Maven supports aggregate reports by most of its plugins. This feature
+        helps to generate one report (of a given type) for all its modules. So
+        this feature only helps if you actually have an
+        <a href="http://maven.apache.org/pom.html#Aggregation">aggragator
+        project</a>. If you have a couple of projects that are loosely coupled,
+        but you also want to aggregate this report information, this plugins
+        helps by generating an attached artifact with all reports you need to
+        access from within the build process of another project.
+      </p>
+
+      <p>
+        Currently this project only provides an <a href="archive-mojo.html">archive
+        mojo</a> that attaches an artifact containing the reports to the build.
+        So for integrating the artifact, that is downloading, extracting and
+        processing, you are still on your own.
+      </p>
+
+      <subsection name="Usage">
+        <p>
+          Information about how to integrate this plugin into your Maven build
+          process can be found on the <a href="usage.html">Usage Page</a>.
+        </p>
+      </subsection>
+
+      <subsection name="Standard Metadata">
+        <p>
+          There are a couple of standard reports automatically included, if
+          their generated reports can be found. Please refer to
+          <a href="descriptors/index.html#Standard_Project_Meta_Data">Standard
+          Project Meta Data</a> for details on these standard reports.
+        </p>
+      </subsection>
+
+      <subsection name="Custom Metadata">
+        <p>
+          If you want to include your own project metadata, please consult
+          <a href="descriptors/index.html#Structure_of_a_Descriptor_File">Structure
+          of a Descriptor File</a> for further information.
+        </p>
+      </subsection>
+		</section>
+  </body>
+</document>
