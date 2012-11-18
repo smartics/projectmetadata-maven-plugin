@@ -31,10 +31,6 @@
 
   <body>
     <breadcrumbs>
-      <item name="${project.name}"  href="${project.url}"/>
-    </breadcrumbs>
-
-    <breadcrumbs>
       <item name="smartics" href="http://www.smartics.de/"/>
       <item name="projects" href="${webroot-projects}/index.html"/>
       <item name="${project.artifactId}" href="${project.url}/index.html"/>
@@ -43,7 +39,13 @@
     <menu name="Overview">
       <item name="Home"                href="index.html"/>
       <item name="Goals"               href="plugin-info.html"/>
-      <!-- <item name="Usage"               href="usage.html"/>  -->
+      <item name="Usage"               href="usage.html"/>
+      <item name="Descriptors"         href="descriptors/index.html">
+        <item name="Static Analysis"   href="descriptors/static-analysis.html"/>
+        <item name="Test"              href="descriptors/test.html"/>
+        <item name="Marker"            href="descriptors/marker.html"/>
+      </item>
+      <item name="Projectmetadata XSD" href="projectmetadata-doc.html"/>
       <item name="Accessing Artifacts" href="http://www.smartics.de/projects/accessing-artifacts"/>
       <item name="All Versions"        href="${webroot}/${project.groupId}/${project.artifactId}/"/>
     </menu>
@@ -89,6 +91,8 @@
         <item name="Code Coverage"      href="cobertura/index.html"/>
         <item name="Sources"            href="xref-test/index.html"/>
       </item>
+
+      <item name="Credits" href="credits.html"/>
     </menu>
   </body>
 </project>

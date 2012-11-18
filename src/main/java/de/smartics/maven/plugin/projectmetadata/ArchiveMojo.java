@@ -91,7 +91,10 @@ public class ArchiveMojo extends AbstractMojo
   private List<String> standardDescriptorNames;
 
   /**
-   * The list of descriptor names to include from other locations.
+   * The list of descriptor names to include from other locations. Please note
+   * that currently only files are supported. Only absolute file names are
+   * supported. Use <tt>${basedir}</tt> to refer to files within the project
+   * folder (which is recommended).
    *
    * @parameter
    * @since 1.0

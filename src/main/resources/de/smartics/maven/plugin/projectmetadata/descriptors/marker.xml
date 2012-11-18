@@ -16,7 +16,7 @@
     limitations under the License.
 
 -->
-<projectMetaData>
+<projectMetaData xmlns="http://smartics.de/projectmetadata/1">
   <metaData>
     <name>Tags</name>
     <homepage>http://mojo.codehaus.org/taglist-maven-plugin/</homepage>
