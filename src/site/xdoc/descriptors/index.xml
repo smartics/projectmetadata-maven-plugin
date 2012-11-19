@@ -23,68 +23,47 @@
       <title>Descriptors</title>
     </head>
 	<body>
-    <section name="Standard Project Meta Data">
-      <p>
-        Per default the following reports are added to the attached artifact,
-        if they are configured (plugins added to report section) with the project:
-      </p>
-      <ol>
-        <li><a href="static-analysis.html">Static Analysis</a>
-          <ul>
-            <li>Checkstyle</li>
-            <li>PMD</li>
-            <li>FindBugs</li>
-            <li>JavaNCSS</li>
-            <li>JDepend</li>
-          </ul>
-        </li>
-        <li><a href="test.html">Test</a>
-          <ul>
-            <li>JUnit</li>
-          </ul>
-        </li>
-        <li><a href="marker.html">Marker</a>
-          <ul>
-            <li>Tags</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+    <section name="Descriptors">
+      <subsection name="Standard Project Meta Data">
+        <p>
+          Per default the following reports are added to the attached artifact,
+          if they are configured (plugins added to report section) with the project:
+        </p>
+        <ol>
+          <li><a href="static-analysis.html">Static Analysis</a>
+            <ul>
+              <li>Checkstyle</li>
+              <li>PMD</li>
+              <li>FindBugs</li>
+              <li>JavaNCSS</li>
+              <li>JDepend</li>
+            </ul>
+          </li>
+          <li><a href="test.html">Test</a>
+            <ul>
+              <li>JUnit</li>
+            </ul>
+          </li>
+          <li><a href="marker.html">Marker</a>
+            <ul>
+              <li>Tags</li>
+            </ul>
+          </li>
+        </ol>
+      </subsection>
 
-    <section name="Structure of a Descriptor File">
-      <p>
-        A project meta data descriptor has the following form (please refer to
-        <a href="../projectmetadata-doc.html">XSD</a> for details):
-      </p>
-      <source><![CDATA[<projectMetaData>
-  <metaData>
-    <name></name>
-    <homepage></homepage>
-    <description></description>
-    <category></category>
-    <subcategory></subcategory>
-
-    <files>
-      <projectLocation></projectLocation>
-      <archiveLocation></archiveLocation>
-      <filter>
-        <includes>
-          <include></include>
-          ...
-        </includes>
-        <excludes>
-          <exclude></exclude>
-          ...
-        </excludes>
-      </filter>
-    </files>
-  </metaData>
-</projectMetaData>]]></source>
-      <p>
-        Add a link to this configuration file by the
-        <a href="../archive-mojo.html#additionalDescriptorFiles">additionalDescriptorFiles</a>
-        property.
-      </p>
+      <subsection name="Custom Project Meta Data">
+        <p>
+          To add custom project meta data you have to provide a reference to
+          a descritor file by the
+          <a href="../archive-mojo.html#additionalDescriptorFiles">additionalDescriptorFiles</a>
+          property.
+        </p>
+        <p>
+          A project meta data descriptor has to be conform to the
+          <a href="../projectmetadata-doc.html">Projectmetadata XSD</a>.
+        </p>
+      </subsection>
     </section>
   </body>
 </document>
