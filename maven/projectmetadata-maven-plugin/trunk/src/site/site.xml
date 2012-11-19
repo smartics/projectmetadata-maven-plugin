@@ -20,6 +20,7 @@
   <bannerLeft>
     <name>${project.name}</name>
     <src>images/logos/logo.png</src>
+    <href>${project.url}</href>
     <alt>${project.name}</alt>
   </bannerLeft>
   <bannerRight>
@@ -31,13 +32,13 @@
 
   <body>
     <breadcrumbs>
-      <item name="smartics" href="http://www.smartics.de/"/>
-      <item name="projects" href="${webroot-projects}/index.html"/>
+      <item name="home"                  href="http://www.smartics.de/"/>
+      <item name="projects"              href="${webroot-projects}/index.html"/>
       <item name="${project.artifactId}" href="${project.url}/index.html"/>
     </breadcrumbs>
 
     <menu name="Overview">
-      <item name="Home"                href="index.html"/>
+      <item name="Introduction"        href="index.html"/>
       <item name="Goals"               href="plugin-info.html"/>
       <item name="Usage"               href="usage.html"/>
       <item name="Descriptors"         href="descriptors/index.html">

@@ -65,7 +65,7 @@
 
           <subsection name="The XSD">
   					<p>
-  					  XSD for download (<a href="download/projectmetadata.xsd">Download projectmetadata.xsd</a>).
+  					  The XSD for reference (<a href="download/projectmetadata.xsd">Download projectmetadata.xsd</a>).
   					</p>
 
   					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>

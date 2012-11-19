@@ -31,19 +31,15 @@
 	<xsl:template match="/">
 		<document>
 			<properties>
-				<title>Static Analysis XML</title>
+				<title>Test XML</title>
 			</properties>
 			<body>
-				<section name="Static Analysis XML">
+				<section name="Test XML">
 					<p>
-					  Contains static analysis reports.
+					  Contains reports on tests.
 					</p>
           <ol>
-            <li><a href="http://checkstyle.sourceforge.net/">Checkstyle</a></li>
-            <li><a href="http://pmd.sourceforge.net/">PMD</a></li>
-            <li><a href="http://findbugs.sourceforge.net/">Findbugs</a></li>
-            <li><a href="http://javancss.codehaus.org/">JavaNCSS</a></li>
-            <li><a href="http://www.clarkware.com/software/JDepend.html">JDepend</a></li>
+            <li><a href="http://www.junit.org/">JUnit</a></li>
           </ol>
 					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
 			  		<xsl:apply-templates select="pm:projectMetaData" />
