@@ -20,7 +20,7 @@
   Copies the module element enclosed in some header and footer.
 -->
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:stylesheet xmlns:pm="http://smartics.de/projectmetadata/1" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   	<xsl:output
 		   method="xml"
 		   indent="yes"
@@ -39,7 +39,7 @@
 					  Contains reports that mark source artifacts.
 					</p>
 					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
-			  		<xsl:apply-templates select="projectMetaData" />
+			  		<xsl:apply-templates select="pm:projectMetaData" />
 			  		<xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
 			    </source>
 			  </section>
@@ -47,7 +47,7 @@
 		</document>
 	</xsl:template>
 
-  <xsl:template match="projectMetaData">
+  <xsl:template match="pm:projectMetaData">
     <xsl:copy-of select="."/>
   </xsl:template>
 </xsl:stylesheet>
