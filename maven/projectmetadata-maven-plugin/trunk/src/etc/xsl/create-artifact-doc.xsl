@@ -31,16 +31,16 @@
 	<xsl:template match="/">
 		<document>
 			<properties>
-				<title>Test XML</title>
+				<title>Artifact XML</title>
 			</properties>
 			<body>
-				<section name="Test XML">
+				<section name="Artifact XML">
 					<p>
-					  Contains reports on tests.
+					  Contains reports about the artifact.
 					</p>
           <ol>
-            <li><a href="http://www.junit.org/">JUnit</a></li>
-            <li><a href="http://www.smartics.eu/smartics-testdoc-tools/">Test Stories</a></li>
+            <li><a href="http://www.smartics.eu/buildmetadata-maven-plugin/">Buildmetadata</a></li>
+            <li><a href="http://www.smartics.eu/issues-maven-plugin/">Release Notes</a></li>
           </ol>
 					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
 			  		<xsl:apply-templates select="pm:projectMetaData" />
