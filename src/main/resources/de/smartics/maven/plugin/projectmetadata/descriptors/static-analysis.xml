@@ -99,9 +99,9 @@
     <name>JDepend</name>
     <homepage>http://www.clarkware.com/software/JDepend.html</homepage>
     <description>
-      JDepend traverses Java class file directories and generates design quality metrics
-      for each Java package. JDepend allows you to automatically measure the
-      quality of a design in terms of its extensibility, reusability, and
+      JDepend traverses Java class file directories and generates design quality
+      metrics for each Java package. JDepend allows you to automatically measure
+      the quality of a design in terms of its extensibility, reusability, and
       maintainability to manage package dependencies effectively.
     </description>
     <category>code</category>
@@ -110,6 +110,28 @@
     <files>
       <projectLocation>/target/jdepend-report.xml</projectLocation>
       <archiveLocation>code/static-analysis/jdepend</archiveLocation>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>Macker</name>
+    <homepage>http://innig.net/macker/</homepage>
+    <description>
+      Macker is a build-time architectural rule checking utility for Java
+      developers.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target</projectLocation>
+      <archiveLocation>code/static-analysis/macker</archiveLocation>
+      <filter>
+        <includes>
+          <include>core-rules.xml</include>
+          <include>macker-out.xml</include>
+        </includes>
+      </filter>
     </files>
   </metaData>
 </projectMetaData>

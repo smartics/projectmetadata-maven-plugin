@@ -11,7 +11,7 @@
 
   <groupId>de.smartics.maven.plugin</groupId>
   <artifactId>projectmetadata-maven-plugin</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.2.0-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>projectmetadata-maven-plugin</name>
@@ -143,6 +143,7 @@
             <configuration>
               <target>
                 <mkdir dir="${descriptors-xdoc}" />
+                <xslt in="${descriptors}/artifact.xml" out="${descriptors-xdoc}/artifact.xml" style="${basedir}/src/etc/xsl/create-artifact-doc.xsl" />
                 <xslt in="${descriptors}/marker.xml" out="${descriptors-xdoc}/marker.xml" style="${basedir}/src/etc/xsl/create-marker-doc.xsl" />
                 <xslt in="${descriptors}/static-analysis.xml" out="${descriptors-xdoc}/static-analysis.xml" style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl" />
                 <xslt in="${descriptors}/test.xml" out="${descriptors-xdoc}/test.xml" style="${basedir}/src/etc/xsl/create-test-doc.xsl" />

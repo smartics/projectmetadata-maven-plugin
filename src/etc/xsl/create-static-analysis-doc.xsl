@@ -44,6 +44,7 @@
             <li><a href="http://findbugs.sourceforge.net/">Findbugs</a></li>
             <li><a href="http://javancss.codehaus.org/">JavaNCSS</a></li>
             <li><a href="http://www.clarkware.com/software/JDepend.html">JDepend</a></li>
+            <li><a href="http://innig.net/macker/">Macker</a></li>
           </ol>
 					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
 			  		<xsl:apply-templates select="pm:projectMetaData" />

@@ -83,7 +83,15 @@ public class ArchiveMojo extends AbstractMojo
       new MavenArchiveConfiguration();
 
   /**
-   * The list of descriptor names to include from the standard folder.
+   * The list of descriptor names to include from the standard folder. Choose
+   * from
+   * <ul>
+   * <li>marker</li>
+   * <li>static-analysis</li>
+   * <li>test</li>
+   * <li>artifact</li>
+   * </ul>
+   * Per default all reports are activated.
    *
    * @parameter
    * @since 1.0
@@ -190,6 +198,7 @@ public class ArchiveMojo extends AbstractMojo
       standardDescriptorNames.add("marker");
       standardDescriptorNames.add("static-analysis");
       standardDescriptorNames.add("test");
+      standardDescriptorNames.add("artifact");
       // TODO
     }
   }
