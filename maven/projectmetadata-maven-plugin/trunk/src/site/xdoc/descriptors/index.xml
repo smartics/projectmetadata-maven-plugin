@@ -30,6 +30,11 @@
           if they are configured (plugins added to report section) with the project:
         </p>
         <ol>
+          <li><a href="api.html">API</a>
+            <ul>
+              <li>Properties</li>
+            </ul>
+          </li>
           <li><a href="artifact.html">Artifact</a>
             <ul>
               <li>Buildmetadata</li>

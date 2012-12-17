@@ -143,6 +143,7 @@
             <configuration>
               <target>
                 <mkdir dir="${descriptors-xdoc}" />
+                <xslt in="${descriptors}/api.xml" out="${descriptors-xdoc}/api.xml" style="${basedir}/src/etc/xsl/create-api-doc.xsl" />
                 <xslt in="${descriptors}/artifact.xml" out="${descriptors-xdoc}/artifact.xml" style="${basedir}/src/etc/xsl/create-artifact-doc.xsl" />
                 <xslt in="${descriptors}/marker.xml" out="${descriptors-xdoc}/marker.xml" style="${basedir}/src/etc/xsl/create-marker-doc.xsl" />
                 <xslt in="${descriptors}/static-analysis.xml" out="${descriptors-xdoc}/static-analysis.xml" style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl" />
