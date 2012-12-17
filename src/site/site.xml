@@ -42,6 +42,7 @@
       <item name="Goals"               href="plugin-info.html"/>
       <item name="Usage"               href="usage.html"/>
       <item name="Descriptors"         href="descriptors/index.html">
+        <item name="API"               href="descriptors/api.html"/>
         <item name="Artifact"          href="descriptors/artifact.html"/>
         <item name="Static Analysis"   href="descriptors/static-analysis.html"/>
         <item name="Test"              href="descriptors/test.html"/>

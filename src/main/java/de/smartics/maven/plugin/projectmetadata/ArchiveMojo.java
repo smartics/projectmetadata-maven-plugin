@@ -86,10 +86,11 @@ public class ArchiveMojo extends AbstractMojo
    * The list of descriptor names to include from the standard folder. Choose
    * from
    * <ul>
+   * <li>api</li>
+   * <li>artifact</li>
    * <li>marker</li>
    * <li>static-analysis</li>
    * <li>test</li>
-   * <li>artifact</li>
    * </ul>
    * Per default all reports are activated.
    *
@@ -199,6 +200,7 @@ public class ArchiveMojo extends AbstractMojo
       standardDescriptorNames.add("static-analysis");
       standardDescriptorNames.add("test");
       standardDescriptorNames.add("artifact");
+      standardDescriptorNames.add("api");
       // TODO
     }
   }
