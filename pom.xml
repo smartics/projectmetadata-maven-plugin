@@ -11,7 +11,7 @@
 
   <groupId>de.smartics.maven.plugin</groupId>
   <artifactId>projectmetadata-maven-plugin</artifactId>
-  <version>0.2.0-SNAPSHOT</version>
+  <version>0.2.0</version>
   <packaging>maven-plugin</packaging>
 
   <name>projectmetadata-maven-plugin</name>
@@ -34,9 +34,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:svn:https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/trunk</connection>
-    <developerConnection>scm:svn:https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/trunk</developerConnection>
-    <url>https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/trunk</url>
+    <connection>scm:svn:https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/tags/projectmetadata-maven-plugin-0.2.0</connection>
+    <developerConnection>scm:svn:https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/tags/projectmetadata-maven-plugin-0.2.0</developerConnection>
+    <url>https://www.smartics.eu/svn/public/maven/projectmetadata-maven-plugin/tags/projectmetadata-maven-plugin-0.2.0</url>
   </scm>
 
   <distributionManagement>
