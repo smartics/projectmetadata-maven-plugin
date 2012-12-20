@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Copyright 2010-2012 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<projectMetaData xmlns="http://smartics.de/projectmetadata/1">
+  <metaData>
+    <name>Tags</name>
+    <homepage>http://mojo.codehaus.org/taglist-maven-plugin/</homepage>
+    <description>
+      The Taglist Maven Plugin generates a report on various tags
+      found in the code, like @todo or //TODO tags.
+    </description>
+    <category>code</category>
+    <subcategory>marker</subcategory>
+
+    <files>
+      <projectLocation>/target/taglist</projectLocation>
+      <archiveLocation>code/marker</archiveLocation>
+      <filter>
+        <includes>
+          <include>*.xml</include>
+        </includes>
+      </filter>
+    </files>
+  </metaData>
+</projectMetaData>
