@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+
+    Copyright 2010-2013 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<projectMetaData xmlns="http://smartics.de/projectmetadata/1">
+  <metaData>
+    <name>Checkstyle</name>
+    <homepage>http://checkstyle.sourceforge.net/</homepage>
+    <description>
+      Checkstyle is a development tool to help programmers write Java
+      code that adheres to a coding standard. It automates the process of
+      checking Java code to spare humans of this boring (but important) task.
+      This makes it ideal for projects that want to enforce a coding standard.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target</projectLocation>
+      <archiveLocation>code/static-analysis/checkstyle</archiveLocation>
+      <filter>
+        <includes>
+          <include>checkstyle-checker.xml</include>
+          <include>checkstyle-result.xml</include>
+        </includes>
+      </filter>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>PMD</name>
+    <homepage>http://pmd.sourceforge.net/</homepage>
+    <description>
+      PMD scans Java source code and looks for potential problems.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target</projectLocation>
+      <archiveLocation>code/static-analysis/pmd</archiveLocation>
+      <filter>
+        <includes>
+          <include>cpd.xml</include>
+          <include>houserules.xml</include>
+          <include>pmd.xml</include>
+        </includes>
+      </filter>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>FindBugs</name>
+    <homepage>http://findbugs.sourceforge.net/</homepage>
+    <description>
+      Findbugs uses static analysis to look for bugs in Java code.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target/findbugsXml.xml</projectLocation>
+      <archiveLocation>code/static-analysis/findbugs</archiveLocation>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>JavaNCSS</name>
+    <homepage>http://javancss.codehaus.org/</homepage>
+    <description>
+      JavaNCSS is a simple utility which measures two standard source
+      code metrics for the Java programming language. The metrics are collected
+      globally, for each class and/or for each function.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target/javancss-raw-report.xml</projectLocation>
+      <archiveLocation>code/static-analysis/javancss</archiveLocation>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>JDepend</name>
+    <homepage>http://www.clarkware.com/software/JDepend.html</homepage>
+    <description>
+      JDepend traverses Java class file directories and generates design quality
+      metrics for each Java package. JDepend allows you to automatically measure
+      the quality of a design in terms of its extensibility, reusability, and
+      maintainability to manage package dependencies effectively.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target/jdepend-report.xml</projectLocation>
+      <archiveLocation>code/static-analysis/jdepend</archiveLocation>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>Macker</name>
+    <homepage>http://innig.net/macker/</homepage>
+    <description>
+      Macker is a build-time architectural rule checking utility for Java
+      developers.
+    </description>
+    <category>code</category>
+    <subcategory>static analysis</subcategory>
+
+    <files>
+      <projectLocation>/target</projectLocation>
+      <archiveLocation>code/static-analysis/macker</archiveLocation>
+      <filter>
+        <includes>
+          <include>core-rules.xml</include>
+          <include>macker-out.xml</include>
+        </includes>
+      </filter>
+    </files>
+  </metaData>
+</projectMetaData>
