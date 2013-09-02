@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2006-2010 smartics, Kronseder & Reiner GmbH
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+<module name="Checker">
+  <!--
+    We do not require package.html files since we use package-info.java.
+    <module name="PackageHtml"/>
+  -->
+
+  <!--
+    Checks whether files end with a new line.
+  -->
+  <!--
+    See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile
+  -->
+  <module name="NewlineAtEndOfFile">
+    <property name="severity" value="warning" />
+  </module>
+  <module name="FileTabCharacter" />
+  <module name="FileLength">
+    <property name="max" value="1500" />
+  </module>
+
+  <!-- Checks that property files contain the same keys.         -->
+  <!-- See http://checkstyle.sf.net/config_misc.html#Translation -->
+  <!--
+    Commented out because not all property files contain keys and missing keys
+    are often intended.
+  <module name="Translation" />
+  -->
+
+  <module name="TreeWalker">
+    <!-- Relevant for calculating line lengths. -->
+    <property name="tabWidth" value="2" />
+    <property name="severity" value="warning" />
+
+    <!-- Checks for Naming Conventions.                  -->
+    <!-- See http://checkstyle.sf.net/config_naming.html -->
+    <!-- smartics justification:                         -->
+    <!--
+      We want to enforce the standard naming patterns.
+    -->
+    <module name="AbstractClassName" />
+    <module name="ConstantName" />
+    <module name="LocalFinalVariableName" />
+    <module name="LocalVariableName" />
+    <module name="MemberName" />
+    <module name="MethodName" />
+    <module name="PackageName" />
+    <module name="ParameterName" />
+    <module name="StaticVariableName" />
+    <module name="TypeName" />
+
+
+    <!-- Checks for Javadoc comments.                     -->
+    <!-- See http://checkstyle.sf.net/config_javadoc.html -->
+    <!-- smartics justification:                         -->
+    <!--
+      We want to have the public interface to be documented with Javadoc.
+      Since we minimize the length of private methods and try to choose
+      expressive names, we do not require to have private methods commented.
+    -->
+    <module name="JavadocMethod">
+      <property name="scope" value="protected"/>
+      <property name="excludeScope" value="package"/>
+      <property name="allowThrowsTagsForSubclasses" value="true"/>
+    </module>
+    <module name="JavadocType" />
+    <module name="JavadocVariable" />
+    <module name="JavadocStyle">
+      <!-- We do not want to allow empty Javadoc. -->
+      <property name="checkEmptyJavadoc" value="true" />
+      <!--
+        We do not require to have valid HTML in Javadoc. We want to
+        reduce the HTML tags as much as possible.
+      -->
+      <property name="checkHtml" value="true" />
+    </module>
+
+
+    <!-- Checks for imports                              -->
+    <!-- See http://checkstyle.sf.net/config_imports.html -->
+    <module name="AvoidStarImport" />
+    <module name="IllegalImport" /> <!-- defaults to sun.* packages -->
+    <module name="RedundantImport" />
+    <module name="UnusedImports" />
+    <!--
+      We do not require a specific structure for our imports. We see no
+      practical gain.
+    -->
+    <!-- <module name="ImportOrder"> -->
+    <!--	<property name="groups" value="java,javax" /> -->
+    <!--	<property name="ordered" value="true" /> -->
+    <!--	<property name="separated" value="true" /> -->
+    <!-- </module> -->
+    <!--
+      There is no standard package name to control this project
+      independent.
+    -->
+    <!-- <module name="ImportControl"> -->
+    <!-- 	<property name="file" value="import-control.xml" /> -->
+    <!-- </module> -->
+
+
+    <!-- Checks for Size Violations.                    -->
+    <!-- See http://checkstyle.sf.net/config_sizes.html -->
+    <module name="ExecutableStatementCount" />
+    <module name="LineLength">
+      <!--
+        It is ok if the lines are longer, if required. We will
+        nonetheless request the auto-formatter to use a max length of 80
+        characters.
+      -->
+      <property name="max" value="120" />
+      <!--
+        Ignore Javadoc comments since references to other elements (@see
+        tag, etc.) may get rather long and should not be truncated.
+      -->
+      <property name="ignorePattern" value="^\s*\*\s*[^\s]+.+$" />
+    </module>
+    <module name="MethodLength">
+      <!--
+        We want our methods to be short and doing one thing. Robert
+        Martin's rule of 4 lines (Clean Code p.34) is the goal, but not
+        a strict rule. He states that a method "should hardly ever be 20
+        lines long". So 40 is currently good enough for us.
+      -->
+      <property name="max" value="40" />
+      <!--
+        Empty lines help to structure code and make it clearer. The same
+        goes with inline comments. Therefore they are not counted as
+        lines.
+      -->
+      <property name="countEmpty" value="false" />
+    </module>
+    <module name="AnonInnerLength" />
+    <module name="ParameterNumber">
+      <!--
+        Robert C. Martin states that 3 parameter are more than enough.
+        We are less strict, currently.
+      -->
+      <property name="max" value="5" />
+    </module>
+
+
+    <!-- Checks for whitespace                               -->
+    <!-- See http://checkstyle.sf.net/config_whitespace.html -->
+    <module name="EmptyForInitializerPad" />
+    <module name="EmptyForIteratorPad" />
+    <module name="MethodParamPad" />
+    <module name="NoWhitespaceAfter">
+      <property name="allowLineBreaks" value="true" />
+      <property name="severity" value="ignore" />
+      <property name="tokens"
+        value="ARRAY_INIT, BNOT, DEC, DOT, INC, LNOT, UNARY_MINUS, UNARY_PLUS" />
+    </module>
+    <module name="NoWhitespaceBefore">
+      <property name="allowLineBreaks" value="true" />
+      <property name="severity" value="ignore" />
+    </module>
+    <module name="OperatorWrap">
+      <property name="tokens"
+        value="BAND, BOR, BSR, BXOR, COLON, DIV, EQUAL, GE, GT, LAND, LE, LITERAL_INSTANCEOF, LOR, LT, MINUS, MOD, NOT_EQUAL, PLUS, QUESTION, SL, SR, STAR" />
+    </module>
+    <module name="ParenPad" />
+    <module name="TypecastParenPad" />
+    <module name="WhitespaceAfter">
+      <property name="severity" value="ignore" />
+    </module>
+    <module name="WhitespaceAround">
+      <property name="severity" value="ignore" />
+    </module>
+
+
+    <!-- Modifier Checks                                    -->
+    <!-- See http://checkstyle.sf.net/config_modifier.html -->
+    <module name="ModifierOrder" />
+    <module name="RedundantModifier" />
+
+
+    <!-- Checks for blocks. You know, those {}'s         -->
+    <!-- See http://checkstyle.sf.net/config_blocks.html -->
+    <module name="EmptyBlock">
+      <!--
+        If there is an empty block, we want that there is comment why it
+        is empty.
+      -->
+      <property name="option" value="text" />
+    </module>
+    <module name="LeftCurly">
+      <!-- We want to brace on a new line. -->
+      <property name="option" value="nl" />
+    </module>
+    <module name="NeedBraces" />
+    <module name="RightCurly">
+      <!-- We want to brace on a new line. -->
+      <property name="option" value="alone" />
+    </module>
+    <module name="AvoidNestedBlocks" />
+
+
+    <!-- Checks for common coding problems               -->
+    <!-- See http://checkstyle.sf.net/config_coding.html -->
+    <module name="AvoidInlineConditionals">
+      <property name="severity" value="ignore" />
+    </module>
+    <module name="CovariantEquals" />
+    <module name="DoubleCheckedLocking" />
+    <module name="EmptyStatement" />
+    <module name="EqualsHashCode" />
+    <module name="FinalLocalVariable" />
+    <!-- Hiding a field is not a real problem in modern IDEs since the
+         members of a class are highlighted and there are sometimes reasons
+         for naming a local variable like a field it corresponds to.
+    <module name="HiddenField">
+      <property name="tokens" value="VARIABLE_DEF" />
+      <property name="ignoreConstructorParameter" value="true" />
+      <property name="ignoreSetter" value="true" />
+    </module>
+    -->
+    <module name="IllegalInstantiation" />
+    <module name="InnerAssignment" />
+    <module name="MagicNumber">
+      <property name="ignoreNumbers"
+        value="-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,32,37,42,64,128,256,512,1024,2048,4096,8192" />
+    </module>
+    <module name="MissingSwitchDefault" />
+    <module name="ModifiedControlVariable" />
+    <module name="RedundantThrows">
+      <property name="allowSubclasses" value="true" />
+      <property name="allowUnchecked" value="true" />
+    </module>
+    <module name="SimplifyBooleanExpression" />
+    <module name="SimplifyBooleanReturn" />
+    <module name="StringLiteralEquality" />
+    <module name="NestedIfDepth">
+      <property name="max" value="2" />
+    </module>
+    <module name="NestedTryDepth">
+      <property name="max" value="2" />
+    </module>
+    <module name="SuperClone" />
+    <module name="SuperFinalize" />
+    <!--
+      We cannot use this rule since serialVersion fields should always
+      come first. We do not want to order the fields by their access
+      modifier but logically. We would like to use the rule that fields
+      are defined in front of constructors and methods.
+    -->
+    <!--
+      <module name="DeclarationOrder" />
+    -->
+    <!--
+      Although we think that using this rule is generally a good idea,
+      we do not use it since declarations in for-loop-headers are
+      naturally in one line. If there would be an option to allow
+      multiple variable declarations in for-loop-headers we would
+      enforce this rule.
+    -->
+    <!--
+      <module name="MultipleVariableDeclarations" />
+    -->
+
+    <!-- Checks for class design                         -->
+    <!-- See http://checkstyle.sf.net/config_design.html -->
+    <module name="VisibilityModifier">
+      <property name="protectedAllowed" value="true" />
+    </module>
+    <module name="FinalClass" />
+    <module name="HideUtilityClassConstructor" />
+    <module name="InterfaceIsType" />
+    <module name="MutableException" />
+    <module name="DesignForExtension">
+      <property name="severity" value="ignore" />
+    </module>
+    <module name="ThrowsCount">
+      <property name="max" value="4" />
+    </module>
+
+
+    <!-- Checks for metrics  -->
+    <!-- See http://checkstyle.sourceforge.net/config_metrics.html -->
+    <module name="CyclomaticComplexity">
+      <!--
+        8 is the number judged as high complexity. This should start the
+        refactoring.
+      -->
+      <property name="max" value="8" />
+    </module>
+    <module name="NPathComplexity" />
+    <module name="JavaNCSS">
+      <!-- Identical to MethodLength. -->
+      <property name="methodMaximum" value="40" />
+      <!--
+        We assume a file length (FileLength) of 1500. Assuming that at
+        least 500 lines are for comments and we allow only one top-level
+        class per file, this number for NCSS seams reasonable.
+      -->
+      <property name="classMaximum " value="1000" />
+      <!--
+        We assume a file length (FileLength) of 1500.
+      -->
+      <property name="fileMaximum" value="1500" />
+    </module>
+
+    <!-- Miscellaneous other checks.                   -->
+    <!-- See http://checkstyle.sf.net/config_misc.html -->
+    <module name="ArrayTypeStyle" />
+    <module name="FinalParameters" />
+    <module name="Regexp">
+      <property name="format" value="[ \t]+$" />
+      <property name="illegalPattern" value="true"/>
+      <property name="message" value="Line has trailing spaces." />
+    </module>
+    <!-- This is also checked by PMD with the feature to override it for command line clients.
+    <module name="GenericIllegalRegexp">
+      <property name="format" value="System\.out\.println" />
+    </module>
+     -->
+    <module name="UpperEll" />
+  </module>
+</module>

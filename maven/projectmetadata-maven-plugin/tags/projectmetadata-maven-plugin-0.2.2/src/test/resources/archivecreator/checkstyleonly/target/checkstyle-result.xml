@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\AbstractBuildMojo.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\AbstractReportMojo.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\BuildMetaDataMojo.java">
+<error line="0" severity="error" message="Got an exception - java.lang.IllegalArgumentException: the name [goal] is not a valid Javadoc tag name" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\BuildPointMojo.java">
+<error line="0" severity="error" message="Got an exception - java.lang.IllegalArgumentException: the name [goal] is not a valid Javadoc tag name" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\BuildReportMojo.java">
+<error line="0" severity="error" message="Got an exception - java.lang.IllegalArgumentException: the name [goal] is not a valid Javadoc tag name" source="com.puppycrawl.tools.checkstyle.TreeWalker"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\BuildReportRenderer.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\Constant.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\MojoUtils.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\RevisionHelper.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\ScmControl.java">
+<error line="97" column="10" severity="warning" message="More than 5 parameters." source="com.puppycrawl.tools.checkstyle.checks.sizes.ParameterNumberCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\ScmCredentials.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\ScmInfo.java">
+<error line="114" column="10" severity="warning" message="More than 5 parameters." source="com.puppycrawl.tools.checkstyle.checks.sizes.ParameterNumberCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\common\SortedProperties.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\AbstractMetaDataProvider.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\HostMetaDataProvider.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\MavenMetaDataProvider.java">
+<error line="194" column="13" severity="warning" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\MavenMetaDataSelection.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\MetaDataProvider.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\MetaDataProviderBuilder.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\data\ScmMetaDataProvider.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\FileMapping.java">
+<error line="63" column="28" severity="warning" message="Unclosed HTML tag found: &lt;code&gt;build." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+<error line="87" column="14" severity="warning" message="Unclosed HTML tag found: &lt;code&gt;build." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\io\BuildPropertiesFileHelper.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\io\BuildXmlFileHelper.java">
+<error line="139" column="3" severity="warning" message="Method length is 43 lines (max allowed is 40)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\io\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\io\SdocBuilder.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\maven\MavenPropertyHelper.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\Property.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\Provider.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\LocallyModifiedInfo.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\MavenRevision.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\MavenScmRevisionNumberFetcher.java">
+<error line="251" column="3" severity="warning" message="Cyclomatic Complexity is 11 (max allowed is 8)." source="com.puppycrawl.tools.checkstyle.checks.metrics.CyclomaticComplexityCheck"/>
+<error line="251" column="3" severity="warning" message="Method length is 55 lines (max allowed is 40)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="278" column="13" severity="warning" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\ScmAccessInfo.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\ScmConnectionInfo.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\maven\StringRevision.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\package-info.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\Revision.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\RevisionNumberFetcher.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\ScmException.java">
+</file>
+<file name="D:\Projekte\workspaces\smartics\maven-buildmetadata-plugin\src\main\java\de\smartics\maven\plugin\buildmetadata\scm\ScmNoRevisionException.java">
+</file>
+</checkstyle>
