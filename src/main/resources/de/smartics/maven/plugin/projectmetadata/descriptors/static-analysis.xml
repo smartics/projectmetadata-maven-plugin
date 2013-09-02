@@ -35,6 +35,7 @@
       <filter>
         <includes>
           <include>checkstyle-checker.xml</include>
+          <include>checkstyle-suppressions.xml</include>
           <include>checkstyle-result.xml</include>
         </includes>
       </filter>
