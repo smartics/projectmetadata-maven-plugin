@@ -62,9 +62,7 @@
     <issues-component>Attach-Mojo,Documentation</issues-component>
 
     <donationId>ZNFSBTAQJ49HA</donationId>
-    <!--
-    <ohlohProjectId>485170</ohlohProjectId>
-    -->
+    <ohlohProjectId>710976</ohlohProjectId>
     <twitterId>smartics</twitterId>
 
     <descriptors>${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/descriptors</descriptors>
