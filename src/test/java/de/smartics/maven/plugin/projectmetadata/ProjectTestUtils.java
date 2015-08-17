@@ -22,9 +22,6 @@ import de.smartics.util.test.io.FileTestUtils;
 
 /**
  * Utilty functions for tests with descriptors.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public final class ProjectTestUtils
 {

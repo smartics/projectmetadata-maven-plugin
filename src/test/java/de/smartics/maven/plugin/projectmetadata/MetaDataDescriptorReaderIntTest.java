@@ -25,9 +25,6 @@ import org.junit.Test;
  * We do not test the content, since this may change. We simply want to make
  * sure that they are parsable.
  * </p>
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class MetaDataDescriptorReaderIntTest
 {

@@ -20,9 +20,6 @@ import java.util.List;
 
 /**
  * Locations to fetch project meta data descriptors.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class DescriptorSet {
   // ********************************* Fields *********************************

@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * The project meta data descriptor.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class ProjectMetaDataDescriptors {
   // ********************************* Fields *********************************
