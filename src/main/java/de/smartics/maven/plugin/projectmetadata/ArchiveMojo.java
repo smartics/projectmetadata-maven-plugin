@@ -17,12 +17,18 @@ package de.smartics.maven.plugin.projectmetadata;
 
 import org.apache.maven.archiver.MavenArchiveConfiguration;
 import org.apache.maven.archiver.MavenArchiver;
+import org.apache.maven.execution.MavenSession;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
+import org.apache.maven.plugins.annotations.Component;
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.DefaultMavenProjectHelper;
 import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectHelper;
+import org.codehaus.plexus.archiver.Archiver;
 import org.codehaus.plexus.archiver.jar.JarArchiver;
 
 import java.io.File;
@@ -33,12 +39,12 @@ import java.util.List;
  * Collects the project files and collects them to a JAR file that is attached
  * to the build.
  *
- * @goal archive
- * @phase package
- * @requiresProject
+ * @since 1.0
  * @description Collects the project files and collects them to a JAR file that
  *              is attached to the build.
  */
+@Mojo(name = "archive", threadSafe = true, requiresProject = true,
+    defaultPhase = LifecyclePhase.PACKAGE)
 public class ArchiveMojo extends AbstractMojo {
   // ********************************* Fields *********************************
 
@@ -51,19 +57,25 @@ public class ArchiveMojo extends AbstractMojo {
   /**
    * The Maven project.
    *
-   * @parameter expression="${project}"
-   * @required
-   * @readonly
    * @since 1.0
    */
+  @Component
   private MavenProject project;
+
+  /**
+   * The Maven session.
+   *
+   * @since 1.0
+   */
+  @Component
+  private MavenSession session;
 
   /**
    * The client Jar archiver.
    *
-   * @component role="org.codehaus.plexus.archiver.Archiver" roleHint="jar"
    * @since 1.0
    */
+  @Component(role = Archiver.class, hint = "jar")
   private JarArchiver jarArchiver;
 
   /**
@@ -71,9 +83,9 @@ public class ArchiveMojo extends AbstractMojo {
    * <a href="http://maven.apache.org/shared/maven-archiver/index.html">Maven
    * Archiver Reference</a>.
    *
-   * @parameter
    * @since 1.0
    */
+  @Parameter
   private final MavenArchiveConfiguration archive =
       new MavenArchiveConfiguration();
 
@@ -89,9 +101,9 @@ public class ArchiveMojo extends AbstractMojo {
    * </ul>
    * Per default all reports are activated.
    *
-   * @parameter
    * @since 1.0
    */
+  @Parameter
   private List<String> standardDescriptorNames;
 
   /**
@@ -100,9 +112,9 @@ public class ArchiveMojo extends AbstractMojo {
    * supported. Use <tt>${basedir}</tt> to refer to files within the project
    * folder (which is recommended).
    *
-   * @parameter
    * @since 1.0
    */
+  @Parameter
   private List<File> additionalDescriptorFiles;
 
   // ... Standard properties ..................................................
@@ -111,9 +123,9 @@ public class ArchiveMojo extends AbstractMojo {
    * A simple flag to skip the generation of the XML files. If set on the
    * command line use <code>-Dprojectmetadata.skip</code>.
    *
-   * @parameter expression="${projectmetadata.skip}" default-value="false"
    * @since 1.0
    */
+  @Parameter(property = "projectmetadata.skip", defaultValue = "false")
   private boolean skip;
 
   // ... Specific properties ..................................................
@@ -121,17 +133,17 @@ public class ArchiveMojo extends AbstractMojo {
   /**
    * Specifies whether to attach the generated artifact to the project helper.
    *
-   * @parameter expression="${attach}" default-value="true"
    * @since 1.0
    */
+  @Parameter(property = "attach", defaultValue = "true")
   private boolean attach;
 
   /**
    * The classifier to use to generate the attached artifact.
    *
-   * @parameter default-value="project"
    * @since 1.0
    */
+  @Parameter(defaultValue = "project")
   private String classifier;
 
   // ****************************** Initializer *******************************
@@ -148,11 +160,7 @@ public class ArchiveMojo extends AbstractMojo {
 
   // --- business -------------------------------------------------------------
 
-  /**
-   * {@inheritDoc}
-   *
-   * @see org.apache.maven.plugin.AbstractMojo#execute()
-   */
+  @Override
   public void execute() throws MojoExecutionException, MojoFailureException {
     if (!skip) {
       init();
@@ -192,7 +200,7 @@ public class ArchiveMojo extends AbstractMojo {
           new ArchiveCreator(project.getBasedir(), new DescriptorSet(
               standardDescriptorNames, additionalDescriptorFiles));
       creator.addProjectMetaDataFiles(clientArchiver.getArchiver());
-      clientArchiver.createArchive(project, archive);
+      clientArchiver.createArchive(session, project, archive);
       return jarFile;
     } catch (final Exception e) {
       throw new MojoExecutionException(
