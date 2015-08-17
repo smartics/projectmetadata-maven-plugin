@@ -31,7 +31,7 @@ import de.smartics.maven.plugin.projectmetadata.bo.MetaDataDescriptor;
  * Creates the archive and populates it with the meta data files described by
  * the descriptor set.
  */
-class ArchiveCreator {
+public class ArchiveCreator {
   // ********************************* Fields *********************************
 
   // --- constants ------------------------------------------------------------
@@ -64,8 +64,8 @@ class ArchiveCreator {
    * @throws NullPointerException if <code>projectBasedir</code> or
    *         <code>descriptorSet</code> is <code>null</code>.
    */
-  ArchiveCreator(final File projectBasedir, final DescriptorSet descriptorSet)
-      throws NullPointerException {
+  public ArchiveCreator(final File projectBasedir,
+      final DescriptorSet descriptorSet) throws NullPointerException {
     checkArguments(projectBasedir, descriptorSet);
     this.projectBasedir = projectBasedir;
     this.descriptorSet = descriptorSet;
@@ -93,7 +93,8 @@ class ArchiveCreator {
 
   // --- business -------------------------------------------------------------
 
-  void addProjectMetaDataFiles(final JarArchiver archiver) throws IOException {
+  public void addProjectMetaDataFiles(final JarArchiver archiver)
+      throws IOException {
     final MetaDataDescriptorReader reader =
         new MetaDataDescriptorReader(descriptorSet);
     final List<MetaDataDescriptor> descriptors =
