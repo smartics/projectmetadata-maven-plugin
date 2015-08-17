@@ -15,10 +15,6 @@
  */
 package de.smartics.maven.plugin.projectmetadata;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.apache.maven.archiver.MavenArchiveConfiguration;
 import org.apache.maven.archiver.MavenArchiver;
 import org.apache.maven.plugin.AbstractMojo;
@@ -29,7 +25,9 @@ import org.apache.maven.project.MavenProject;
 import org.apache.maven.project.MavenProjectHelper;
 import org.codehaus.plexus.archiver.jar.JarArchiver;
 
-import de.smartics.maven.util.LoggingUtils;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Collects the project files and collects them to a JAR file that is attached
@@ -120,18 +118,6 @@ public class ArchiveMojo extends AbstractMojo {
    */
   private boolean skip;
 
-  /**
-   * Specifies the log level used for this plugin.
-   * <p>
-   * Allowed values are <code>SEVERE</code>, <code>WARNING</code>,
-   * <code>INFO</code> and <code>FINEST</code>.
-   * </p>
-   *
-   * @parameter expression="${projectmetadata.logLevel}"
-   * @since 1.0
-   */
-  private String logLevel;
-
   // ... Specific properties ..................................................
 
   /**
@@ -184,8 +170,6 @@ public class ArchiveMojo extends AbstractMojo {
   }
 
   private void init() {
-    LoggingUtils.configureLogger(getLog(), logLevel);
-
     if (standardDescriptorNames == null) {
       standardDescriptorNames = new ArrayList<String>();
       standardDescriptorNames.add("marker");
