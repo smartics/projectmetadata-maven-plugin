@@ -61,15 +61,15 @@
   </scm>
 
   <issueManagement>
-    <system>bugzilla</system>
-    <url>http://www.smartics.eu/bugzilla</url>
+    <system>jira</system>
+    <url>${info.server.issues}/PMDMP</url>
   </issueManagement>
-<!--
+  <!--
   <ciManagement>
     <system>hudson</system>
     <url>http://www.smartics.eu/hudson</url>
   </ciManagement>
- -->
+  -->
 
   <distributionManagement>
     <repository>
