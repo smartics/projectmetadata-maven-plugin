@@ -76,18 +76,18 @@
     <repository>
       <id>${project-visibility}</id>
       <name>internal smartics release repository</name>
-      <url>${repo.server.upload}/${project-visibility}</url>
+      <url>${build.server.repo.upload}/${project-visibility}</url>
     </repository>
     <snapshotRepository>
       <uniqueVersion>false</uniqueVersion>
       <id>${project-visibility}-snapshot</id>
       <name>internal smartics snapshot repository</name>
-      <url>${repo.server.upload}/${project-visibility}-snapshot</url>
+      <url>${build.server.repo.upload}/${project-visibility}-snapshot</url>
     </snapshotRepository>
     <site>
       <id>${project-visibility}-site</id>
       <name>documentation site</name>
-      <url>${site.root}/${project.groupId}/${project.artifactId}/${project.version}</url>
+      <url>${build.server.site.upload}/${project.groupId}/${project.artifactId}/${project.version}</url>
     </site>
   </distributionManagement>
 
