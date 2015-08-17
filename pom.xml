@@ -147,7 +147,6 @@
 
     <version.xstream>1.3.1</version.xstream>
 
-    <version.smartics-test-utils>0.3.3</version.smartics-test-utils>
     <version.junit>4.12</version.junit>
 
     <version.buildmetadata-maven-plugin>1.5.0.RC1</version.buildmetadata-maven-plugin>
