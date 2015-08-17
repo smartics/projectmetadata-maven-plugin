@@ -91,6 +91,29 @@
     </site>
   </distributionManagement>
 
+  <repositories>
+    <repository>
+      <id>smartics-${project-visibility}</id>
+      <url>${info.server.repo.group}</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>smartics-${project-visibility}-snapshot</id>
+      <url>${info.server.repo.group}</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <properties>
     <donationId>ZNFSBTAQJ49HA</donationId>
     <ohlohProjectId>710976</ohlohProjectId>
@@ -107,11 +130,14 @@
 
     <info.server.web>https://www.smartics.eu/confluence/display</info.server.web>
     <info.server.issues>https://www.smartics.eu/jira/projects</info.server.issues>
-    <info.server.repo>http://www.smartics.eu/nexus</info.server.repo>
+    <info.server.repo>https://www.smartics.eu/nexus</info.server.repo>
     <info.server.scm>https://www.smartics.eu/svn/public</info.server.scm>
 
+    <info.server.repo.prefix>${info.server.repo}/content</info.server.repo.prefix>
+    <info.server.repo.group>${info.server.repo.prefix}/groups/public-group</info.server.repo.group>
+
     <build.server.site.upload>scp://www.smartics.eu/home/smartics/public_html/${info.project.visibility}</build.server.site.upload>
-    <build.server.repo.upload>dav:${info.server.repo}/content/repositories</build.server.repo.upload>
+    <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories</build.server.repo.upload>
 
     <maven-fluido-smartics-skin_version>2.0.4</maven-fluido-smartics-skin_version>
 
