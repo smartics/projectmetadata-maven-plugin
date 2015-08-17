@@ -15,21 +15,22 @@
  */
 package de.smartics.maven.plugin.projectmetadata;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
-
-import com.thoughtworks.xstream.XStream;
-
 import de.smartics.maven.plugin.projectmetadata.bo.FilesDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.FilterDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.MetaDataDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.ProjectMetaDataDescriptors;
+
+import com.thoughtworks.xstream.XStream;
+
+import org.codehaus.plexus.util.IOUtil;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Reads the configured project meta data descriptors.
@@ -137,7 +138,7 @@ public class MetaDataDescriptorReader {
                 (ProjectMetaDataDescriptors) xstream.fromXML(in);
             metaDataList.addAll(project.getMetaDataDescriptors());
           } finally {
-            IOUtils.closeQuietly(in);
+            IOUtil.close(in);
           }
         } else {
           throw new IOException("Cannot read meta data descriptor file '" + name
@@ -157,7 +158,7 @@ public class MetaDataDescriptorReader {
       for (final File file : additionalDescriptorFiles) {
         InputStream in = null;
         try {
-          in = FileUtils.openInputStream(file);
+          in = new BufferedInputStream(new FileInputStream(file));
           final ProjectMetaDataDescriptors project =
               (ProjectMetaDataDescriptors) xstream.fromXML(in);
           final List<MetaDataDescriptor> descriptors =
@@ -166,7 +167,7 @@ public class MetaDataDescriptorReader {
             metaDataList.addAll(descriptors);
           }
         } finally {
-          IOUtils.closeQuietly(in);
+          IOUtil.close(in);
         }
       }
     }
