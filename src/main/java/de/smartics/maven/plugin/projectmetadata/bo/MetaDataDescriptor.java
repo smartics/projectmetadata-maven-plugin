@@ -1,17 +1,17 @@
 /*
  * Copyright 2010-2013 smartics, Kronseder & Reiner GmbH
  *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
  */
 package de.smartics.maven.plugin.projectmetadata.bo;
 
@@ -23,8 +23,7 @@ package de.smartics.maven.plugin.projectmetadata.bo;
  * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
  * @version $Revision:591 $
  */
-public class MetaDataDescriptor
-{
+public class MetaDataDescriptor {
   // ********************************* Fields *********************************
 
   // --- constants ------------------------------------------------------------
@@ -82,8 +81,7 @@ public class MetaDataDescriptor
    *
    * @return the descriptive name of the meta data.
    */
-  public String getName()
-  {
+  public String getName() {
     return name;
   }
 
@@ -94,8 +92,7 @@ public class MetaDataDescriptor
    *
    * @return the URL to the home page of the tool that generated the meta data.
    */
-  public String getHomepage()
-  {
+  public String getHomepage() {
     return homepage;
   }
 
@@ -106,8 +103,7 @@ public class MetaDataDescriptor
    *
    * @return the value for description.
    */
-  public String getDescription()
-  {
+  public String getDescription() {
     return description;
   }
 
@@ -116,8 +112,7 @@ public class MetaDataDescriptor
    *
    * @return the category the meta data belongs to.
    */
-  public String getCategory()
-  {
+  public String getCategory() {
     return category;
   }
 
@@ -126,8 +121,7 @@ public class MetaDataDescriptor
    *
    * @return the subcategory the meta data belongs to.
    */
-  public String getSubcategory()
-  {
+  public String getSubcategory() {
     return subcategory;
   }
 
@@ -138,8 +132,7 @@ public class MetaDataDescriptor
    * @return the descriptor of the project files to include in the set of meta
    *         data.
    */
-  public FilesDescriptor getFiles()
-  {
+  public FilesDescriptor getFiles() {
     return files;
   }
 
