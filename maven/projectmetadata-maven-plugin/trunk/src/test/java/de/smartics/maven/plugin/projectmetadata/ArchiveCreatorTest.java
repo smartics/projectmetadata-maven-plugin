@@ -32,9 +32,6 @@ import de.smartics.util.test.io.FileTestUtils;
 
 /**
  * Tests {@link ArchiveCreator}.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class ArchiveCreatorTest
 {

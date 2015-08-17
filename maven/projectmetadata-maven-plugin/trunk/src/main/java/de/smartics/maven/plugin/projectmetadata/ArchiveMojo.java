@@ -38,8 +38,6 @@ import java.util.List;
  * @requiresProject
  * @description Collects the project files and collects them to a JAR file that
  *              is attached to the build.
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class ArchiveMojo extends AbstractMojo {
   // ********************************* Fields *********************************

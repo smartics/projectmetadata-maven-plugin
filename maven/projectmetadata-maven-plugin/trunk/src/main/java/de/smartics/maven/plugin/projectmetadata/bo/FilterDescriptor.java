@@ -19,9 +19,6 @@ import java.util.List;
 
 /**
  * The filter is used to select files for inclusion.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class FilterDescriptor {
   // ********************************* Fields *********************************

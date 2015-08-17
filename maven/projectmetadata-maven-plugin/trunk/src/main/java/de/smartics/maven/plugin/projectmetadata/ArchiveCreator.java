@@ -30,9 +30,6 @@ import de.smartics.maven.plugin.projectmetadata.bo.MetaDataDescriptor;
 /**
  * Creates the archive and populates it with the meta data files described by
  * the descriptor set.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 class ArchiveCreator {
   // ********************************* Fields *********************************

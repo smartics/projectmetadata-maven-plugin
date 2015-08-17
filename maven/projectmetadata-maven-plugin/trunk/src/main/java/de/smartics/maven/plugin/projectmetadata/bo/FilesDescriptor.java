@@ -17,9 +17,6 @@ package de.smartics.maven.plugin.projectmetadata.bo;
 
 /**
  * The descriptor of the project files to include in the set of meta data.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class FilesDescriptor {
   // ********************************* Fields *********************************

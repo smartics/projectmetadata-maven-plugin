@@ -34,9 +34,6 @@ import de.smartics.maven.plugin.projectmetadata.bo.MetaDataDescriptor;
  * <p>
  * The test make sure that the XStream library is configured correctly.
  * </p>
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class MetaDataDescriptorReaderTest
 {

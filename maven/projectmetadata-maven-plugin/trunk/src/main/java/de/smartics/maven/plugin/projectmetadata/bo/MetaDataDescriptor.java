@@ -19,9 +19,6 @@ package de.smartics.maven.plugin.projectmetadata.bo;
  * A descriptor of a piece of project meta data. This descriptor is used to
  * fetch the relevant files from the project and to package them in the JAR
  * artifact.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class MetaDataDescriptor {
   // ********************************* Fields *********************************

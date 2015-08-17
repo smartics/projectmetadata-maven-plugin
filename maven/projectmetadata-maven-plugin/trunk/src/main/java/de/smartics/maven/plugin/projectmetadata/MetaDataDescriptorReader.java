@@ -34,9 +34,6 @@ import java.util.List;
 
 /**
  * Reads the configured project meta data descriptors.
- *
- * @author <a href="mailto:robert.reiner@smartics.de">Robert Reiner</a>
- * @version $Revision:591 $
  */
 public class MetaDataDescriptorReader {
   // ********************************* Fields *********************************
