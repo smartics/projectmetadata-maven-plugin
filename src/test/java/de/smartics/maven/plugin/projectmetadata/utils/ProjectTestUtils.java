@@ -13,9 +13,10 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package de.smartics.maven.plugin.projectmetadata;
+package de.smartics.maven.plugin.projectmetadata.utils;
 
-import de.smartics.maven.plugin.projectmetadata.utils.FileTestUtils;
+import de.smartics.maven.plugin.projectmetadata.DescriptorSet;
+import de.smartics.maven.plugin.projectmetadata.MetaDataDescriptorReader;
 
 import java.io.File;
 import java.util.Arrays;
@@ -52,26 +53,26 @@ public final class ProjectTestUtils
 
   // --- business -------------------------------------------------------------
 
-  static MetaDataDescriptorReader createStandardReader(
+  public static MetaDataDescriptorReader createStandardReader(
       final String descriptorName)
   {
     return new MetaDataDescriptorReader(createStandardTestSet(descriptorName));
   }
 
-  static DescriptorSet createStandardTestSet(final String descriptorName)
+  public static DescriptorSet createStandardTestSet(final String descriptorName)
   {
     return new DescriptorSet(Arrays.asList(new String[]
     { descriptorName }), null);
   }
 
-  static MetaDataDescriptorReader createAdditionalReader(final String basePath,
+  public static MetaDataDescriptorReader createAdditionalReader(final String basePath,
       final String descriptorName)
   {
     return new MetaDataDescriptorReader(createAdditionalTestSet(basePath,
         descriptorName));
   }
 
-  static DescriptorSet createAdditionalTestSet(final String basePath,
+  public static DescriptorSet createAdditionalTestSet(final String basePath,
       final String descriptorName)
   {
     final String resourceName = basePath + '/' + descriptorName + ".xml";
@@ -80,7 +81,7 @@ public final class ProjectTestUtils
     { descriptorFile }));
   }
 
-  static String normalizePath(final String path)
+  public static String normalizePath(final String path)
   {
     return new File(path).getPath();
   }

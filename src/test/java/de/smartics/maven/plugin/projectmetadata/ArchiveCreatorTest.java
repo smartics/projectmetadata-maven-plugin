@@ -18,17 +18,17 @@ package de.smartics.maven.plugin.projectmetadata;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import de.smartics.maven.plugin.projectmetadata.utils.FileTestUtils;
 
 import org.codehaus.plexus.archiver.ArchiverException;
 import org.codehaus.plexus.archiver.jar.JarArchiver;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import de.smartics.util.test.io.FileTestUtils;
+import java.io.File;
+import java.io.IOException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Tests {@link ArchiveCreator}.
