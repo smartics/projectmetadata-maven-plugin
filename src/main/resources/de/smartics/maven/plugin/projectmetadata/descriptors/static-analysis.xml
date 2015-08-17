@@ -44,7 +44,7 @@
 
   <metaData>
     <name>PMD</name>
-    <homepage>http://pmd.sourceforge.net/</homepage>
+    <homepage>https://pmd.github.io/</homepage>
     <description>
       PMD scans Java source code and looks for potential problems.
     </description>
@@ -81,7 +81,7 @@
 
   <metaData>
     <name>JavaNCSS</name>
-    <homepage>http://javancss.codehaus.org/</homepage>
+    <homepage>https://github.com/codehaus/javancss</homepage>
     <description>
       JavaNCSS is a simple utility which measures two standard source
       code metrics for the Java programming language. The metrics are collected
@@ -116,7 +116,7 @@
 
   <metaData>
     <name>Macker</name>
-    <homepage>http://innig.net/macker/</homepage>
+    <homepage>https://innig.net/macker/</homepage>
     <description>
       Macker is a build-time architectural rule checking utility for Java
       developers.

@@ -42,7 +42,7 @@
 
   <metaData>
     <name>Release Notes</name>
-    <homepage>http://www.smartics.eu/issues-maven-plugin/</homepage>
+    <homepage>https://www.smartics.eu/issues-maven-plugin/</homepage>
     <description>
       The issues plugin generates reports on issues retrieved from an issue
       management system.

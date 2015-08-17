@@ -19,7 +19,7 @@
 <projectMetaData xmlns="http://smartics.de/projectmetadata/1">
   <metaData>
     <name>Tags</name>
-    <homepage>http://mojo.codehaus.org/taglist-maven-plugin/</homepage>
+    <homepage>http://www.mojohaus.org/taglist-maven-plugin/</homepage>
     <description>
       The Taglist Maven Plugin generates a report on various tags
       found in the code, like @todo or //TODO tags.
