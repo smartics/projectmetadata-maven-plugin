@@ -18,10 +18,30 @@
 -->
 <projectMetaData xmlns="http://smartics.de/projectmetadata/1">
   <metaData>
-    <name>Properties</name>
-    <homepage>http://www.smartics.eu/smartics-properties-maven-plugin/</homepage>
+    <name>Codes</name>
+    <homepage>https://www.smartics.eu/smartics-codes-maven-plugin/</homepage>
     <description>
-      The plugin provides information about its configuration capabilities.
+      Provides information on codes used by the application.
+    </description>
+    <category>api</category>
+    <subcategory>codes</subcategory>
+
+    <files>
+      <projectLocation>/target/application-codes</projectLocation>
+      <archiveLocation>api/codes</archiveLocation>
+      <filter>
+        <includes>
+          <include>*.xml</include>
+        </includes>
+      </filter>
+    </files>
+  </metaData>
+
+  <metaData>
+    <name>Properties</name>
+    <homepage>https://www.smartics.eu/smartics-properties-maven-plugin/</homepage>
+    <description>
+      Provides information about the application configuration capabilities.
     </description>
     <category>api</category>
     <subcategory>properties</subcategory>

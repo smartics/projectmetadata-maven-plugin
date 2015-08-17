@@ -36,9 +36,10 @@
 			<body>
 				<section name="API XML">
 					<p>
-					  Contains reports the API of the artifact.
+					  Contains reports concerning the API of the artifact.
 					</p>
           <ol>
+            <li><a href="http://www.smartics.eu/smartics-codes-maven-plugin/">Codes</a></li>
             <li><a href="http://www.smartics.eu/smartics-properties-maven-plugin/">Properties</a></li>
           </ol>
 					<source><xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
