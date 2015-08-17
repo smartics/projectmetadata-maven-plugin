@@ -204,12 +204,6 @@
     </dependency>
 
     <dependency>
-      <groupId>de.smartics.util</groupId>
-      <artifactId>smartics-test-utils</artifactId>
-      <version>${version.smartics-test-utils}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${version.junit}</version>
