@@ -172,8 +172,6 @@
 
     <version.wagon-webdav>1.0-beta-2</version.wagon-webdav>
     <version.wagon-ssh>1.0</version.wagon-ssh>
-
-    <mavenVersion>2.2.1</mavenVersion>
   </properties>
 
   <dependencies>
