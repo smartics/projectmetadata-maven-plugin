@@ -74,18 +74,18 @@
 
   <distributionManagement>
     <repository>
-      <id>${project-visibility}</id>
+      <id>${info.project.visibility}</id>
       <name>internal smartics release repository</name>
-      <url>${build.server.repo.upload}/${project-visibility}</url>
+      <url>${build.server.repo.upload}/${info.project.visibility}</url>
     </repository>
     <snapshotRepository>
       <uniqueVersion>false</uniqueVersion>
-      <id>${project-visibility}-snapshot</id>
+      <id>${info.project.visibility}-snapshot</id>
       <name>internal smartics snapshot repository</name>
-      <url>${build.server.repo.upload}/${project-visibility}-snapshot</url>
+      <url>${build.server.repo.upload}/${info.project.visibility}-snapshot</url>
     </snapshotRepository>
     <site>
-      <id>${project-visibility}-site</id>
+      <id>${info.project.visibility}-site</id>
       <name>documentation site</name>
       <url>${build.server.site.upload}/${project.groupId}/${project.artifactId}/${project.version}</url>
     </site>
@@ -93,7 +93,7 @@
 
   <repositories>
     <repository>
-      <id>smartics-${project-visibility}</id>
+      <id>smartics-${info.project.visibility}</id>
       <url>${info.server.repo.group}</url>
       <releases>
         <enabled>true</enabled>
@@ -103,7 +103,7 @@
       </snapshots>
     </repository>
     <repository>
-      <id>smartics-${project-visibility}-snapshot</id>
+      <id>smartics-${info.project.visibility}-snapshot</id>
       <url>${info.server.repo.group}</url>
       <releases>
         <enabled>false</enabled>
