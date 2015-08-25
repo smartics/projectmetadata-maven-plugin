@@ -139,7 +139,7 @@
     <build.server.site.upload>scp://www.smartics.eu/home/smartics/public_html/${info.project.visibility}</build.server.site.upload>
     <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories</build.server.repo.upload>
 
-    <maven-fluido-smartics-skin_version>2.0.4</maven-fluido-smartics-skin_version>
+    <maven-fluido-smartics-skin_version>2.1.0</maven-fluido-smartics-skin_version>
 
     <version.maven>3.0.3</version.maven>
     <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
@@ -547,44 +547,45 @@
             <version>${version.wagon-ssh}</version>
           </dependency>
         </dependencies>
-        <configuration>
-          <reportPlugins>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-project-info-reports-plugin</artifactId>
-              <version>${version.maven-project-info-reports-plugin}</version>
-              <reportSets>
-                <reportSet>
-                  <reports>
-                    <report>cim</report>
-                    <report>dependencies</report>
-                    <report>dependency-convergence</report>
-                    <report>dependency-management</report>
-                    <report>index</report>
-                    <report>issue-tracking</report>
-                    <report>license</report>
-                    <report>modules</report>
-                    <report>plugin-management</report>
-                    <report>project-team</report>
-                    <report>scm</report>
-                    <report>summary</report>
-                  </reports>
-                </reportSet>
-              </reportSets>
-            </plugin>
-            <plugin>
-              <groupId>de.smartics.maven.plugin</groupId>
-              <artifactId>buildmetadata-maven-plugin</artifactId>
-              <version>${version.buildmetadata-maven-plugin}</version>
-            </plugin>
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-plugin-plugin</artifactId>
-              <version>${version.maven-plugin-plugin}</version>
-            </plugin>
-          </reportPlugins>
-        </configuration>
       </plugin>
     </plugins>
   </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${version.maven-project-info-reports-plugin}</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>cim</report>
+              <report>dependencies</report>
+              <report>dependency-convergence</report>
+              <report>dependency-management</report>
+              <!-- <report>index</report> -->
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>modules</report>
+              <report>plugin-management</report>
+              <report>project-team</report>
+              <report>scm</report>
+              <report>summary</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>de.smartics.maven.plugin</groupId>
+        <artifactId>buildmetadata-maven-plugin</artifactId>
+        <version>${version.buildmetadata-maven-plugin}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>${version.maven-plugin-plugin}</version>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
