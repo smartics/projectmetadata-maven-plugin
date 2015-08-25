@@ -61,7 +61,6 @@
       <item name="Introduction"        href="index.html"/>
       <item name="Goals"               href="plugin-info.html"/>
       <item name="Usage"               href="usage.html"/>
-      <item name="Project Blog"        href="${webroot-projects}/projects/documentation-a-ware/projectmetadata-maven-plugin"/>
       <item name="Accessing Artifacts" href="http://www.smartics.de/projects/accessing-artifacts"/>
       <item name="Latest Version"      href="${webroot}/${project.artifactId}/index.html"/>
       <item name="All Versions"        href="${webroot}/${project.groupId}/${project.artifactId}/"/>
