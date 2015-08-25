@@ -36,12 +36,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Collects the project files and collects them to a JAR file that is attached
- * to the build.
+ * Collects selected project files and compiles them into a JAR file that is
+ * attached to the build.
  *
  * @since 1.0
- * @description Collects the project files and collects them to a JAR file that
- *              is attached to the build.
+ * @description Collects selected project files and compiles them into a JAR
+ *              file that is attached to the build.
  */
 @Mojo(name = "archive", threadSafe = true, requiresProject = true,
     defaultPhase = LifecyclePhase.PACKAGE)
@@ -108,7 +108,7 @@ public class ArchiveMojo extends AbstractMojo {
 
   /**
    * The list of descriptor names to include from other locations. Please note
-   * that currently only files are supported.
+   * that only files are supported.
    *
    * @since 1.0
    */
