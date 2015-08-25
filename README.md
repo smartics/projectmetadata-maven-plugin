@@ -13,7 +13,7 @@ A set of report files are attached by default. Additional custom files can be at
 
 Please visit
 
-  * the [plugin's homepage] (https://www.smartics.eu/confluence/display/PMDMP/)
+  * the [plugin's homepage] (https://www.smartics.eu/confluence/display/HOMESPACE/Projectmetadata+Maven+Plugin)
   * the [plugin's report site] (https://www.smartics.eu/projectmetadata-maven-plugin/)
 
 for more information.
