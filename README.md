@@ -17,4 +17,4 @@ Please visit
   * the [plugin's report site] (https://www.smartics.eu/projectmetadata-maven-plugin/) - for reporting information on the plugin.
  
 ## Related Plugins
-* Buildmetadata Maven Plugin (https://github.com/smartics/buildmetadata-maven-plugin) - collect metadata about the build of a project.
+* [Buildmetadata Maven Plugin] (https://github.com/smartics/buildmetadata-maven-plugin) - collect metadata about the build of a project.
