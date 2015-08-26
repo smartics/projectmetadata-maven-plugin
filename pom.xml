@@ -459,6 +459,7 @@
             <exclude>LICENSE-*</exclude>
             <exclude>src/etc/license/javadoc.xml</exclude>
             <exclude>src/etc/license/header.txt</exclude>
+            <exclude>**/*.md</exclude>
           </excludes>
           <mapping>
             <!--  Unfortunately we use xml.vm extensions to filter xdoc pages.
