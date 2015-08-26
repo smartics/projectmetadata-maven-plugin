@@ -1,6 +1,9 @@
 Projectmetadata Maven Plugin
 ============================
 
+<img align="right" src="https://raw.githubusercontent.com/smartics/projectmetadata-maven-plugin/master/src/site/resources/images/logos/icon-128x128.png" alt="Projectmetadata Logo" hspace="5">
+
+
 Collects and bundles metadata about the project and attaches the artifact containing this metadata to the build.
 
 ##Overview
