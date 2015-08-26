@@ -18,6 +18,6 @@ Please visit
 
   * the [plugin's homepage] (https://www.smartics.eu/confluence/display/HOMESPACE/Projectmetadata+Maven+Plugin) - for more information on how to use this plugin.
   * the [plugin's report site] (https://www.smartics.eu/projectmetadata-maven-plugin/) - for reporting information on the plugin.
- 
+
 ## Related Plugins
 * [Buildmetadata Maven Plugin] (https://github.com/smartics/buildmetadata-maven-plugin) - collect metadata about the build of a project.
