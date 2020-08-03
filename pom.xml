@@ -1,6 +1,9 @@
 <?xml version='1.0'?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<!--suppress UnresolvedMavenProperty -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.smartics.maven.plugin</groupId>
@@ -52,8 +55,11 @@
   </prerequisites>
 
   <scm>
-    <connection>scm:git:git@github.com:smartics/projectmetadata-maven-plugin</connection>
-    <developerConnection>scm:git:git@github.com:smartics/projectmetadata-maven-plugin</developerConnection>
+    <connection>scm:git:git@github.com:smartics/projectmetadata-maven-plugin
+    </connection>
+    <developerConnection>
+      scm:git:git@github.com:smartics/projectmetadata-maven-plugin
+    </developerConnection>
     <url>https://github.com/smartics/projectmetadata-maven-plugin</url>
     <tag>HEAD</tag>
   </scm>
@@ -84,7 +90,9 @@
     <site>
       <id>${info.project.visibility}-site</id>
       <name>documentation site</name>
-      <url>${build.server.site.upload}/${project.groupId}/${project.artifactId}/${project.version}</url>
+      <url>
+        ${build.server.site.upload}/${project.groupId}/${project.artifactId}/${project.version}
+      </url>
     </site>
   </distributionManagement>
 
@@ -116,8 +124,12 @@
     <ohlohProjectId>710976</ohlohProjectId>
     <twitterId>smartics</twitterId>
 
-    <descriptors>${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/descriptors</descriptors>
-    <descriptors-xdoc>${project.build.directory}/generated-site/xdoc/descriptors</descriptors-xdoc>
+    <descriptors>
+      ${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/descriptors
+    </descriptors>
+    <descriptors-xdoc>
+      ${project.build.directory}/generated-site/xdoc/descriptors
+    </descriptors-xdoc>
 
     <build.java.version>1.6</build.java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -125,23 +137,33 @@
 
     <info.project.visibility>public</info.project.visibility>
 
-    <info.server.web>https://www.smartics.eu/confluence/display</info.server.web>
-    <info.server.issues>https://www.smartics.eu/jira/projects</info.server.issues>
+    <info.server.web>https://www.smartics.eu/confluence/display
+    </info.server.web>
+    <info.server.issues>https://www.smartics.eu/jira/projects
+    </info.server.issues>
     <info.server.repo>https://www.smartics.eu/nexus</info.server.repo>
     <info.server.scm>https://www.smartics.eu/svn/public</info.server.scm>
     <info.server.site>https://www.smartics.eu</info.server.site>
 
-    <info.server.repo.prefix>${info.server.repo}/content</info.server.repo.prefix>
-    <info.server.repo.group>${info.server.repo.prefix}/groups/public-group</info.server.repo.group>
+    <info.server.repo.prefix>${info.server.repo}/content
+    </info.server.repo.prefix>
+    <info.server.repo.group>${info.server.repo.prefix}/groups/public-group
+    </info.server.repo.group>
 
-    <build.server.site.upload>scp://www.smartics.eu/home/smartics/public_html/${info.project.visibility}</build.server.site.upload>
-    <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories</build.server.repo.upload>
+    <build.server.site.upload>
+      scp://www.smartics.eu/home/smartics/public_html/${info.project.visibility}
+    </build.server.site.upload>
+    <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories
+    </build.server.repo.upload>
 
     <webroot>${info.server.site}</webroot>
-    <weburl>${info.server.site}/${project.groupId}/${project.artifactId}/${project.version}</weburl>
+    <weburl>
+      ${info.server.site}/${project.groupId}/${project.artifactId}/${project.version}
+    </weburl>
     <webroot-projects>http://www.smartics.de/projects</webroot-projects>
 
-    <maven-fluido-smartics-skin_version>2.1.0</maven-fluido-smartics-skin_version>
+    <maven-fluido-smartics-skin_version>2.1.0
+    </maven-fluido-smartics-skin_version>
 
     <version.maven>3.0.3</version.maven>
     <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
@@ -152,7 +174,8 @@
 
     <version.junit>4.12</version.junit>
 
-    <version.buildmetadata-maven-plugin>1.6.0</version.buildmetadata-maven-plugin>
+    <version.buildmetadata-maven-plugin>1.6.0
+    </version.buildmetadata-maven-plugin>
     <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
     <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
     <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
@@ -169,7 +192,8 @@
     <version.ant-nodeps>1.8.1</version.ant-nodeps>
     <version.ant-trax>1.8.0</version.ant-trax>
 
-    <version.maven-project-info-reports-plugin>2.7</version.maven-project-info-reports-plugin>
+    <version.maven-project-info-reports-plugin>2.7
+    </version.maven-project-info-reports-plugin>
 
     <version.wagon-webdav>1.0-beta-2</version.wagon-webdav>
     <version.wagon-ssh>1.0</version.wagon-ssh>
@@ -235,20 +259,27 @@
           <artifactId>maven-jar-plugin</artifactId>
           <version>${version.maven-jar-plugin}</version>
           <configuration>
-            <index>true</index>
             <archive>
+              <index>true</index>
               <manifest>
-                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true
+                </addDefaultImplementationEntries>
+                <addDefaultSpecificationEntries>true
+                </addDefaultSpecificationEntries>
               </manifest>
               <manifestEntries>
-                <Implementation-SCM-Revision-Number>${build.scmRevision.id}</Implementation-SCM-Revision-Number>
-                <Implementation-SCM-Revision-Date>${build.scmRevision.date}</Implementation-SCM-Revision-Date>
+                <Implementation-SCM-Revision-Number>${build.scmRevision.id}
+                </Implementation-SCM-Revision-Number>
+                <Implementation-SCM-Revision-Date>${build.scmRevision.date}
+                </Implementation-SCM-Revision-Date>
                 <Implementation-URL>${project.url}</Implementation-URL>
                 <Implementation-Date>${build.date}</Implementation-Date>
-                <Implementation-Timestamp>${build.timestamp.millis}</Implementation-Timestamp>
-                <Implementation-DatePattern>${build.date.pattern}</Implementation-DatePattern>
-                <Implementation-Full-Version>${build.version.full}</Implementation-Full-Version>
+                <Implementation-Timestamp>${build.timestamp.millis}
+                </Implementation-Timestamp>
+                <Implementation-DatePattern>${build.date.pattern}
+                </Implementation-DatePattern>
+                <Implementation-Full-Version>${build.version.full}
+                </Implementation-Full-Version>
                 <Built-OS>${os.name} / ${os.arch} / ${os.version}</Built-OS>
                 <Built-By>${build.user}</Built-By>
                 <Maven-Version>${build.maven.version}</Maven-Version>
@@ -300,75 +331,6 @@
         </plugin>
 
         <plugin>
-          <groupId>org.eclipse.m2e</groupId>
-          <artifactId>lifecycle-mapping</artifactId>
-          <version>1.0.0</version>
-          <configuration>
-            <lifecycleMappingMetadata>
-              <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>de.smartics.maven.plugin</groupId>
-                    <artifactId>buildmetadata-maven-plugin</artifactId>
-                    <versionRange>[0.0.0,)</versionRange>
-                    <goals>
-                      <goal>provide-buildmetadata</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                  </action>
-                </pluginExecution>
-
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-enforcer-plugin</artifactId>
-                    <versionRange>[1.0,)</versionRange>
-                    <goals>
-                      <goal>enforce</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                  </action>
-                </pluginExecution>
-
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <versionRange>[0.0.0,)</versionRange>
-                    <goals>
-                      <goal>copy-dependencies</goal>
-                      <goal>unpack</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                  </action>
-                </pluginExecution>
-
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-plugin-plugin</artifactId>
-                    <versionRange>[3.2,)</versionRange>
-                    <goals>
-                      <goal>descriptor</goal>
-                      <goal>helpmojo</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore />
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
-          </configuration>
-        </plugin>
-
-        <plugin>
           <artifactId>maven-antrun-plugin</artifactId>
           <version>${version.maven-antrun-plugin}</version>
           <dependencies>
@@ -414,7 +376,8 @@
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${project.build.outputDirectory}/META-INF</outputDirectory>
+              <outputDirectory>${project.build.outputDirectory}/META-INF
+              </outputDirectory>
               <resources>
                 <resource>
                   <directory>${basedir}</directory>
@@ -478,17 +441,32 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${descriptors-xdoc}" />
-                <xslt in="${descriptors}/api.xml" out="${descriptors-xdoc}/api.xml" style="${basedir}/src/etc/xsl/create-api-doc.xsl" />
-                <xslt in="${descriptors}/artifact.xml" out="${descriptors-xdoc}/artifact.xml" style="${basedir}/src/etc/xsl/create-artifact-doc.xsl" />
-                <xslt in="${descriptors}/marker.xml" out="${descriptors-xdoc}/marker.xml" style="${basedir}/src/etc/xsl/create-marker-doc.xsl" />
-                <xslt in="${descriptors}/static-analysis.xml" out="${descriptors-xdoc}/static-analysis.xml" style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl" />
-                <xslt in="${descriptors}/test.xml" out="${descriptors-xdoc}/test.xml" style="${basedir}/src/etc/xsl/create-test-doc.xsl" />
+                <mkdir dir="${descriptors-xdoc}"/>
+                <xslt in="${descriptors}/api.xml"
+                      out="${descriptors-xdoc}/api.xml"
+                      style="${basedir}/src/etc/xsl/create-api-doc.xsl"/>
+                <xslt in="${descriptors}/artifact.xml"
+                      out="${descriptors-xdoc}/artifact.xml"
+                      style="${basedir}/src/etc/xsl/create-artifact-doc.xsl"/>
+                <xslt in="${descriptors}/marker.xml"
+                      out="${descriptors-xdoc}/marker.xml"
+                      style="${basedir}/src/etc/xsl/create-marker-doc.xsl"/>
+                <xslt in="${descriptors}/static-analysis.xml"
+                      out="${descriptors-xdoc}/static-analysis.xml"
+                      style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl"/>
+                <xslt in="${descriptors}/test.xml"
+                      out="${descriptors-xdoc}/test.xml"
+                      style="${basedir}/src/etc/xsl/create-test-doc.xsl"/>
 
-                <xslt in="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd/projectmetadata.xsd" out="${project.build.directory}/generated-site/xdoc/projectmetadata-doc.xml" style="${basedir}/src/etc/xsl/create-projectmetadata-doc.xsl" />
-                <copy todir="${project.build.directory}/generated-site/resources/download">
-                  <fileset dir="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd">
-                    <include name="**/*.xsd" />
+                <xslt
+                    in="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd/projectmetadata.xsd"
+                    out="${project.build.directory}/generated-site/xdoc/projectmetadata-doc.xml"
+                    style="${basedir}/src/etc/xsl/create-projectmetadata-doc.xsl"/>
+                <copy
+                    todir="${project.build.directory}/generated-site/resources/download">
+                  <fileset
+                      dir="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd">
+                    <include name="**/*.xsd"/>
                   </fileset>
                 </copy>
               </target>
