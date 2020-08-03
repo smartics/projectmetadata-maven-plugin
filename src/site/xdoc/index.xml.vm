@@ -34,7 +34,7 @@
       <meta name="DC.subject" content="Homepage of the projectmetadata Maven Plugin"/>
       <meta name="DC.description" content="Homepage of the projectmetadata Maven Plugin. This easy-to-use plugin collects and bundles project meta data."/>
       <meta name="DC.publisher" content="smartics"/>
-      <meta name="DC.rights" content="Copyright 2010-2016 smartics"/>
+      <meta name="DC.rights" content="Copyright 2010-2020 smartics"/>
     </head>
 	<body>
     <section name="Introduction">
