@@ -137,24 +137,19 @@
 
     <info.project.visibility>public</info.project.visibility>
 
-    <info.server.web>https://www.smartics.eu/confluence/display
-    </info.server.web>
-    <info.server.issues>https://www.smartics.eu/jira/projects
-    </info.server.issues>
+    <info.server.web>https://www.smartics.eu/confluence/display</info.server.web>
+    <info.server.issues>https://www.smartics.eu/jira/projects</info.server.issues>
     <info.server.repo>https://www.smartics.eu/nexus</info.server.repo>
     <info.server.scm>https://www.smartics.eu/svn/public</info.server.scm>
     <info.server.site>https://www.smartics.eu</info.server.site>
 
-    <info.server.repo.prefix>${info.server.repo}/content
-    </info.server.repo.prefix>
-    <info.server.repo.group>${info.server.repo.prefix}/groups/public-group
-    </info.server.repo.group>
+    <info.server.repo.prefix>${info.server.repo}/content</info.server.repo.prefix>
+    <info.server.repo.group>${info.server.repo.prefix}/groups/public-group</info.server.repo.group>
 
     <build.server.site.upload>
       scp://www.smartics.eu/home/smartics/public_html/${info.project.visibility}
     </build.server.site.upload>
-    <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories
-    </build.server.repo.upload>
+    <build.server.repo.upload>dav:${info.server.repo.prefix}/repositories</build.server.repo.upload>
 
     <webroot>${info.server.site}</webroot>
     <weburl>
@@ -162,8 +157,7 @@
     </weburl>
     <webroot-projects>http://www.smartics.de/projects</webroot-projects>
 
-    <maven-fluido-smartics-skin_version>2.1.0
-    </maven-fluido-smartics-skin_version>
+    <maven-fluido-smartics-skin_version>2.1.0</maven-fluido-smartics-skin_version>
 
     <version.maven>3.0.3</version.maven>
     <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
@@ -174,8 +168,7 @@
 
     <version.junit>4.12</version.junit>
 
-    <version.buildmetadata-maven-plugin>1.6.0
-    </version.buildmetadata-maven-plugin>
+    <version.buildmetadata-maven-plugin>1.6.0</version.buildmetadata-maven-plugin>
     <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
     <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
     <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
@@ -192,8 +185,7 @@
     <version.ant-nodeps>1.8.1</version.ant-nodeps>
     <version.ant-trax>1.8.0</version.ant-trax>
 
-    <version.maven-project-info-reports-plugin>2.7
-    </version.maven-project-info-reports-plugin>
+    <version.maven-project-info-reports-plugin>2.7</version.maven-project-info-reports-plugin>
 
     <version.wagon-webdav>1.0-beta-2</version.wagon-webdav>
     <version.wagon-ssh>1.0</version.wagon-ssh>
@@ -413,6 +405,8 @@
             <year>${build.copyright.year}</year>
           </properties>
           <excludes>
+            <exclude>.idea/**</exclude>
+            <exclude>*.iml</exclude>
             <exclude>.settings/**</exclude>
             <exclude>.*</exclude>
             <exclude>COPYRIGHT.txt</exclude>
