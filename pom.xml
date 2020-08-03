@@ -131,7 +131,7 @@
       ${project.build.directory}/generated-site/xdoc/descriptors
     </descriptors-xdoc>
 
-    <build.java.version>1.6</build.java.version>
+    <build.java.version>1.8</build.java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -164,7 +164,7 @@
     <version.maven-plugin-api>${version.maven}</version.maven-plugin-api>
     <version.maven-archiver>2.6</version.maven-archiver>
 
-    <version.xstream>1.4.10-java7</version.xstream>
+    <version.xstream>1.4.10</version.xstream>
 
     <version.junit>4.12</version.junit>
 
