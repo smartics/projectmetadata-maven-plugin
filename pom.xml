@@ -166,7 +166,7 @@
 
     <version.xstream>1.4.14</version.xstream>
 
-    <version.junit>4.12</version.junit>
+    <version.junit>4.13.1</version.junit>
 
     <version.buildmetadata-maven-plugin>1.6.0</version.buildmetadata-maven-plugin>
     <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
