@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright 2010-2020 smartics, Kronseder & Reiner GmbH
+    Copyright 2010-2022 smartics, Kronseder & Reiner GmbH
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@
       <meta name="DC.subject" content="Homepage of the projectmetadata Maven Plugin"/>
       <meta name="DC.description" content="Homepage of the projectmetadata Maven Plugin. This easy-to-use plugin collects and bundles project meta data."/>
       <meta name="DC.publisher" content="smartics"/>
-      <meta name="DC.rights" content="Copyright 2010-2020 smartics"/>
+      <meta name="DC.rights" content="Copyright 2010-2022 smartics"/>
     </head>
 	<body>
     <section name="Introduction">
