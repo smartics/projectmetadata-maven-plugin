@@ -162,33 +162,30 @@
     <version.maven>3.0.3</version.maven>
     <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
     <version.maven-plugin-api>${version.maven}</version.maven-plugin-api>
-    <version.maven-archiver>2.6</version.maven-archiver>
+    <version.maven-archiver>3.6.1</version.maven-archiver>
 
     <version.xstream>1.4.14</version.xstream>
 
     <version.junit>4.13.1</version.junit>
 
-    <version.buildmetadata-maven-plugin>1.6.0</version.buildmetadata-maven-plugin>
-    <version.maven-compiler-plugin>3.3</version.maven-compiler-plugin>
-    <version.maven-deploy-plugin>2.8.2</version.maven-deploy-plugin>
-    <version.maven-install-plugin>2.5.2</version.maven-install-plugin>
-    <version.maven-jar-plugin>2.6</version.maven-jar-plugin>
+    <buildmetadata-maven-plugin.version>1.7.0</buildmetadata-maven-plugin.version>
+    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
+    <maven-install-plugin.version>3.1.1</maven-install-plugin.version>
+    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     <version.maven-javadoc-plugin>2.10.3</version.maven-javadoc-plugin>
-    <version.maven-license-plugin>1.9.0</version.maven-license-plugin>
-    <version.maven-release-plugin>2.5.2</version.maven-release-plugin>
-    <version.maven-resources-plugin>2.7</version.maven-resources-plugin>
-    <version.maven-scm-plugin>1.9.4</version.maven-scm-plugin>
-    <version.maven-site-plugin>3.4</version.maven-site-plugin>
-    <version.maven-source-plugin>2.4</version.maven-source-plugin>
-    <version.maven-plugin-plugin>3.4</version.maven-plugin-plugin>
+    <maven-license-plugin.version>1.9.0</maven-license-plugin.version>
+    <maven-release-plugin.version>3.0.1</maven-release-plugin.version>
+    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    <maven-scm-plugin.version>2.0.1</maven-scm-plugin.version>
+    <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
+    <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
+    <version.maven-plugin-plugin>3.11.0</version.maven-plugin-plugin>
     <version.maven-antrun-plugin>1.7</version.maven-antrun-plugin>
     <version.ant-nodeps>1.8.1</version.ant-nodeps>
     <version.ant-trax>1.8.0</version.ant-trax>
 
-    <version.maven-project-info-reports-plugin>2.7</version.maven-project-info-reports-plugin>
-
-    <version.wagon-webdav>1.0-beta-2</version.wagon-webdav>
-    <version.wagon-ssh>1.0</version.wagon-ssh>
+    <maven-project-info-reports-plugin.version>3.5.0</maven-project-info-reports-plugin.version>
   </properties>
 
   <dependencies>
@@ -233,7 +230,7 @@
       <plugins>
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>${version.maven-compiler-plugin}</version>
+          <version>${maven-compiler-plugin.version}</version>
           <configuration>
             <source>${build.java.version}</source>
             <target>${build.java.version}</target>
@@ -241,15 +238,15 @@
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>${version.maven-resources-plugin}</version>
+          <version>${maven-resources-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-source-plugin</artifactId>
-          <version>${version.maven-source-plugin}</version>
+          <version>${maven-source-plugin.version}</version>
         </plugin>
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
-          <version>${version.maven-jar-plugin}</version>
+          <version>${maven-jar-plugin.version}</version>
           <configuration>
             <archive>
               <index>true</index>
@@ -293,17 +290,17 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-install-plugin</artifactId>
-          <version>${version.maven-install-plugin}</version>
+          <version>${maven-install-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>${version.maven-deploy-plugin}</version>
+          <version>${maven-deploy-plugin.version}</version>
           <dependencies>
             <dependency>
               <groupId>org.apache.maven.wagon</groupId>
-              <artifactId>wagon-webdav</artifactId>
-              <version>${version.wagon-webdav}</version>
+              <artifactId>wagon-webdav-jackrabbit</artifactId>
+              <version>3.5.3</version>
             </dependency>
           </dependencies>
         </plugin>
@@ -311,12 +308,12 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>${version.maven-release-plugin}</version>
+          <version>${maven-release-plugin.version}</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-scm-plugin</artifactId>
-          <version>${version.maven-scm-plugin}</version>
+          <version>${maven-scm-plugin.version}</version>
           <configuration>
             <connectionType>developerConnection</connectionType>
           </configuration>
@@ -345,7 +342,7 @@
       <plugin>
         <groupId>de.smartics.maven.plugin</groupId>
         <artifactId>buildmetadata-maven-plugin</artifactId>
-        <version>${version.buildmetadata-maven-plugin}</version>
+        <version>${buildmetadata-maven-plugin.version}</version>
         <executions>
           <execution>
             <phase>initialize</phase>
@@ -387,7 +384,7 @@
       <plugin>
         <groupId>com.mycila.maven-license-plugin</groupId>
         <artifactId>maven-license-plugin</artifactId>
-        <version>${version.maven-license-plugin}</version>
+        <version>${maven-license-plugin.version}</version>
         <executions>
           <execution>
             <goals>
@@ -495,54 +492,16 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
-        <version>${version.maven-site-plugin}</version>
+        <version>${maven-site-plugin.version}</version>
         <dependencies>
+          <!-- add support for ssh/scp -->
           <dependency>
-            <!-- add support for ssh/scp -->
             <groupId>org.apache.maven.wagon</groupId>
             <artifactId>wagon-ssh</artifactId>
-            <version>${version.wagon-ssh}</version>
+            <version>3.5.3</version>
           </dependency>
         </dependencies>
       </plugin>
     </plugins>
   </build>
-
-  <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-project-info-reports-plugin</artifactId>
-        <version>${version.maven-project-info-reports-plugin}</version>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>cim</report>
-              <report>dependencies</report>
-              <report>dependency-convergence</report>
-              <report>dependency-management</report>
-              <!-- <report>index</report> -->
-              <report>issue-tracking</report>
-              <report>license</report>
-              <report>modules</report>
-              <report>plugin-management</report>
-              <report>project-team</report>
-              <report>scm</report>
-              <report>summary</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-      <plugin>
-        <groupId>de.smartics.maven.plugin</groupId>
-        <artifactId>buildmetadata-maven-plugin</artifactId>
-        <version>${version.buildmetadata-maven-plugin}</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>${version.maven-plugin-plugin}</version>
-      </plugin>
-    </plugins>
-  </reporting>
 </project>
