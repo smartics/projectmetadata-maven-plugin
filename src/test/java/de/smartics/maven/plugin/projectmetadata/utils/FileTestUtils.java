@@ -15,7 +15,7 @@
  */
 package de.smartics.maven.plugin.projectmetadata.utils;
 
-import org.apache.maven.shared.utils.io.IOUtil;
+import org.codehaus.plexus.util.IOUtil;
 
 import java.io.BufferedInputStream;
 import java.io.File;
