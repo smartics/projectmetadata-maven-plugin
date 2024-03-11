@@ -164,7 +164,7 @@
     <version.maven-plugin-api>${version.maven}</version.maven-plugin-api>
     <version.maven-archiver>3.6.1</version.maven-archiver>
 
-    <version.xstream>1.4.14</version.xstream>
+    <version.xstream>1.4.20</version.xstream>
 
     <version.junit>4.13.1</version.junit>
 

@@ -15,13 +15,13 @@
  */
 package de.smartics.maven.plugin.projectmetadata;
 
+import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.NullPermission;
 import de.smartics.maven.plugin.projectmetadata.bo.FilesDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.FilterDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.MetaDataDescriptor;
 import de.smartics.maven.plugin.projectmetadata.bo.ProjectMetaDataDescriptors;
-
-import com.thoughtworks.xstream.XStream;
-
 import org.codehaus.plexus.util.IOUtil;
 
 import java.io.BufferedInputStream;
@@ -45,8 +45,6 @@ public class MetaDataDescriptorReader {
   /**
    * The list of descriptor names to include from the standard and additional
    * folder.
-   *
-   * @parameter
    */
   private final DescriptorSet descriptorSet;
 
@@ -57,10 +55,8 @@ public class MetaDataDescriptorReader {
   /**
    * Default constructor.
    *
-   * @param standardDescriptorNames the list of descriptor names to include from
-   *        the standard folder.
-   * @param additionalDescriptorFiles the list of descriptor names to include
-   *        from other locations.
+   * @param descriptorSet the list of descriptor names to include from the
+   *                      standard and additional folder.
    */
   public MetaDataDescriptorReader(final DescriptorSet descriptorSet) {
     this.descriptorSet = descriptorSet;
@@ -96,6 +92,14 @@ public class MetaDataDescriptorReader {
 
   private XStream initStream() {
     final XStream xstream = new XStream();
+
+    xstream.addPermission(NoTypePermission.NONE);
+    xstream.addPermission(NullPermission.NULL);
+    xstream.allowTypes(
+        new Class[] {String.class, ProjectMetaDataDescriptors.class,
+            MetaDataDescriptor.class, FilterDescriptor.class,
+            FilesDescriptor.class});
+
     xstream.alias("projectMetaData", ProjectMetaDataDescriptors.class);
     xstream.addImplicitCollection(ProjectMetaDataDescriptors.class,
         "metaDataDescriptors");
