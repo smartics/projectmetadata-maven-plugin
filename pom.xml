@@ -1,14 +1,12 @@
 <?xml version='1.0'?>
 
 <!--suppress UnresolvedMavenProperty -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.smartics.maven.plugin</groupId>
   <artifactId>projectmetadata-maven-plugin</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <packaging>maven-plugin</packaging>
 
   <name>Projectmetadata Maven Plugin</name>
@@ -61,7 +59,7 @@
       scm:git:git@github.com:smartics/projectmetadata-maven-plugin
     </developerConnection>
     <url>https://github.com/smartics/projectmetadata-maven-plugin</url>
-    <tag>HEAD</tag>
+    <tag>projectmetadata-maven-plugin-1.0.1</tag>
   </scm>
 
   <issueManagement>
@@ -432,32 +430,17 @@
             </goals>
             <configuration>
               <target>
-                <mkdir dir="${descriptors-xdoc}"/>
-                <xslt in="${descriptors}/api.xml"
-                      out="${descriptors-xdoc}/api.xml"
-                      style="${basedir}/src/etc/xsl/create-api-doc.xsl"/>
-                <xslt in="${descriptors}/artifact.xml"
-                      out="${descriptors-xdoc}/artifact.xml"
-                      style="${basedir}/src/etc/xsl/create-artifact-doc.xsl"/>
-                <xslt in="${descriptors}/marker.xml"
-                      out="${descriptors-xdoc}/marker.xml"
-                      style="${basedir}/src/etc/xsl/create-marker-doc.xsl"/>
-                <xslt in="${descriptors}/static-analysis.xml"
-                      out="${descriptors-xdoc}/static-analysis.xml"
-                      style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl"/>
-                <xslt in="${descriptors}/test.xml"
-                      out="${descriptors-xdoc}/test.xml"
-                      style="${basedir}/src/etc/xsl/create-test-doc.xsl"/>
+                <mkdir dir="${descriptors-xdoc}" />
+                <xslt in="${descriptors}/api.xml" out="${descriptors-xdoc}/api.xml" style="${basedir}/src/etc/xsl/create-api-doc.xsl" />
+                <xslt in="${descriptors}/artifact.xml" out="${descriptors-xdoc}/artifact.xml" style="${basedir}/src/etc/xsl/create-artifact-doc.xsl" />
+                <xslt in="${descriptors}/marker.xml" out="${descriptors-xdoc}/marker.xml" style="${basedir}/src/etc/xsl/create-marker-doc.xsl" />
+                <xslt in="${descriptors}/static-analysis.xml" out="${descriptors-xdoc}/static-analysis.xml" style="${basedir}/src/etc/xsl/create-static-analysis-doc.xsl" />
+                <xslt in="${descriptors}/test.xml" out="${descriptors-xdoc}/test.xml" style="${basedir}/src/etc/xsl/create-test-doc.xsl" />
 
-                <xslt
-                    in="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd/projectmetadata.xsd"
-                    out="${project.build.directory}/generated-site/xdoc/projectmetadata-doc.xml"
-                    style="${basedir}/src/etc/xsl/create-projectmetadata-doc.xsl"/>
-                <copy
-                    todir="${project.build.directory}/generated-site/resources/download">
-                  <fileset
-                      dir="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd">
-                    <include name="**/*.xsd"/>
+                <xslt in="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd/projectmetadata.xsd" out="${project.build.directory}/generated-site/xdoc/projectmetadata-doc.xml" style="${basedir}/src/etc/xsl/create-projectmetadata-doc.xsl" />
+                <copy todir="${project.build.directory}/generated-site/resources/download">
+                  <fileset dir="${basedir}/src/main/resources/de/smartics/maven/plugin/projectmetadata/xsd">
+                    <include name="**/*.xsd" />
                   </fileset>
                 </copy>
               </target>
