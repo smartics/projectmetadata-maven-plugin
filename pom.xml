@@ -159,12 +159,12 @@
 
     <maven-fluido-smartics-skin_version>2.1.0</maven-fluido-smartics-skin_version>
 
-    <version.maven>3.0.3</version.maven>
+    <version.maven>3.9.9</version.maven>
     <version.maven-plugin-annotations>3.4</version.maven-plugin-annotations>
     <version.maven-plugin-api>${version.maven}</version.maven-plugin-api>
-    <version.maven-archiver>3.6.1</version.maven-archiver>
+    <version.maven-archiver>3.6.3</version.maven-archiver>
 
-    <version.xstream>1.4.20</version.xstream>
+    <version.xstream>1.4.21</version.xstream>
 
     <version.junit>4.13.1</version.junit>
 
