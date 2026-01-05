@@ -26,7 +26,7 @@
       <url>http://www.apache.org/licenses/LICENSE-2.0</url>
       <distribution>repo</distribution>
       <comments>
-        Copyright 2010-2025 smartics, Kronseder &amp; Reiner GmbH
+        Copyright 2010-2026 smartics, Kronseder &amp; Reiner GmbH
       </comments>
     </license>
   </licenses>
@@ -251,24 +251,17 @@
             <archive>
               <index>true</index>
               <manifest>
-                <addDefaultImplementationEntries>true
-                </addDefaultImplementationEntries>
-                <addDefaultSpecificationEntries>true
-                </addDefaultSpecificationEntries>
+                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
               </manifest>
               <manifestEntries>
-                <Implementation-SCM-Revision-Number>${build.scmRevision.id}
-                </Implementation-SCM-Revision-Number>
-                <Implementation-SCM-Revision-Date>${build.scmRevision.date}
-                </Implementation-SCM-Revision-Date>
+                <Implementation-SCM-Revision-Number>${build.scmRevision.id}</Implementation-SCM-Revision-Number>
+                <Implementation-SCM-Revision-Date>${build.scmRevision.date}</Implementation-SCM-Revision-Date>
                 <Implementation-URL>${project.url}</Implementation-URL>
                 <Implementation-Date>${build.date}</Implementation-Date>
-                <Implementation-Timestamp>${build.timestamp.millis}
-                </Implementation-Timestamp>
-                <Implementation-DatePattern>${build.date.pattern}
-                </Implementation-DatePattern>
-                <Implementation-Full-Version>${build.version.full}
-                </Implementation-Full-Version>
+                <Implementation-Timestamp>${build.timestamp.millis}</Implementation-Timestamp>
+                <Implementation-DatePattern>${build.date.pattern}</Implementation-DatePattern>
+                <Implementation-Full-Version>${build.version.full}</Implementation-Full-Version>
                 <Built-OS>${os.name} / ${os.arch} / ${os.version}</Built-OS>
                 <Built-By>${build.user}</Built-By>
                 <Maven-Version>${build.maven.version}</Maven-Version>
